@@ -1,31 +1,20 @@
-
-import styled from "styled-components";
-import Header from "./Header";
-import Content from "./Content";
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import MainResume from './MainResume';
+import ProjectDetail from './Components/Project_section/ProjectDetail.js';
 
 function App() {
   return (
      <>
-      <Body>
-          <Header/>
-          <Content/>
-      </Body>
+     <BrowserRouter>
+        <Routes>
+             <Route path="/" element={<MainResume/>}/>
+             <Route path="project" element={<ProjectDetail/>}></Route>
+        </Routes>
+        
+     </BrowserRouter>
+      
      </>
   );
 }
-
-const Body = styled.div`
-  height:100vh;
-  width:100vw;
-  background-color: #16252d;
-  @media (max-width: 768px) {
-    height: 130vh;
-  }
-
-  @media (max-width: 426px) {
-    width:100vw;
-    height: 120vh;
-  }
-`;
 
 export default App;
