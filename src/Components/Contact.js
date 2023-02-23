@@ -86,7 +86,7 @@ const Input = styled.div`
     @media (max-width: 450px) {
       font-size: 1.5rem;
       padding: 2%;
-      color:#2d9687;
+      color:#fda769;
     }  
   }
   input:focus{

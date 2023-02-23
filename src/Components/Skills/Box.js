@@ -67,7 +67,7 @@ const Container = styled.div`
     // border: 1px solid blue;
     display: flex;
     align-items:center;
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
         height: 100%;
         justify-content: space-evenly;
         align-items:center;
@@ -86,7 +86,7 @@ const Content = styled.div`
     @media (max-width: 769px) {
         height:80%;
     }
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
        height:35rem;
        width: 90%;
        flex-direction:column;
@@ -104,7 +104,7 @@ const LeftArrow = styled.div`
         width: 6.5rem;
         filter: contrast(0.5);
     }
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
         display:none;
    }
    &:hover {
@@ -123,7 +123,7 @@ const RightArrow = styled.div`
         width: 6.5rem;
         filter: contrast(0.5);
     }
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
         display:none;
    }   
    &:hover {
@@ -133,7 +133,7 @@ const RightArrow = styled.div`
 
 const Guide = styled.div`
    display:none;
-   @media (max-width: 426px) {
+   @media (max-width: 550px) {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -158,7 +158,7 @@ const LeftSection = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content: center;
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
          width:90%;
          height: 18%;
          border-right: none;
@@ -174,7 +174,7 @@ const RightSection = styled.div`
     display:flex;
     flex-direction: column;
     align-items:center;
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
         width:100%;
         height: 82%;
   }
@@ -192,7 +192,7 @@ const Photo = styled.div`
         height: 100%;
         width:100%;
     }
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
         display:none;
    }
 `;
@@ -208,7 +208,7 @@ const Name = styled.div`
     font-size: 3rem;
     font-weight: 700;
     
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
         font-size:x-large;
         font-weight: 500;
    }
@@ -252,14 +252,11 @@ const Testimonial = styled.div`
     margin: 7% 0px;
     font-weight: 400;
     color: black;
-    @media (max-width: 426px) {
+    @media (max-width: 550px) {
          margin:10px 0px;
          font-size:1.4rem;
    }
 
 `;
-
-
-
 
 export default Box

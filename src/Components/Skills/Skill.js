@@ -14,13 +14,13 @@ function Skill() {
 
 const Container = styled.div` 
     height:100vh;
-    width:100vw;
+    width:100%;
     scroll-snap-align: start;
     @media (max-width: 768px) {
         height: 100vh;
     }
-    @media (max-width: 430px) {
-        width:100vw;
+    @media (max-width: 550px) {
+        width:100%;
         height: 100vh;
     }
 `;

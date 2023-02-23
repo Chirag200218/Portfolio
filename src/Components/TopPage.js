@@ -93,7 +93,7 @@ const Deskstop = styled.div`
     height:100vh;
     width:100vw;
     position:relative;
-    @media only screen and (max-width: 426px) {
+    @media only screen and (max-width: 550px) {
         display:none;
     }
     
@@ -497,7 +497,7 @@ const Content = styled.div`
 
 const Mobile = styled.div`
     display:none;
-    @media only screen and (max-width: 426px) {
+    @media only screen and (max-width: 550px) {
         display:block;
     }
 `;

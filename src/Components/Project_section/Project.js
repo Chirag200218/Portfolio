@@ -62,18 +62,16 @@ const Container = styled.div`
 `;
 const Title = styled.div`
     display:none;
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 550px) {
         position:absolute;
-        left: 22%;
-        top: -3%;
+        text-align:center;
         height:10%;
         width:100%;
         display:block;
-        font-weight: 700;
+        font-weight: 800;
         font-family: 'GT Sectra Display','Times New Roman',sans-serif;
         // color: #f7ebda;
         font-size:6rem;
-        // font-style: italic;
         color: transparent;
         text-shadow: 0.02em 0.02em 0.01em rgb(0 0 0 / 25%), 0 0 0 #8e8e8e;
         -webkit-text-stroke: 0.5px #343434;
@@ -132,6 +130,9 @@ const Section = styled.div`
         width: 90%;
         height: 88%;
         // border: 1px solid red;
+        ::-webkit-scrollbar {
+            display: none;
+          }
     }
 }`;
 

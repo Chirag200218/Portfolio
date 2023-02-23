@@ -44,11 +44,11 @@ const Head = styled.div`
             color:#328e32;
         }
         text-align:center;
-        @media only screen and (max-width: 430px) {
+        @media only screen and (max-width: 550px) {
             display:none;
         }
     }
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 550px) {
            height:13%; 
     }
 `;
