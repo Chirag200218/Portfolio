@@ -6,6 +6,13 @@ import Typewriter from 'typewriter-effect';
 function BackGroundCircle(props) {
   return (
     <Container> 
+         {/* <Social as={motion.div} initial={{x:-400}} viewport={{once:true}} whileInView={{x:10}} transition={{duration:4.5}}>
+                <motion.ul>
+                <li><a target="_blank" href="https://leetcode.com/Chirag_dungarwal/">Leetcode<img src={'/images/leetcode.svg'}></img></a></li>
+                <li><a target="_blank"  href="https://github.com/Chirag200218">Github <img src={'/images/github.png'}></img></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/chirag-jain-8871aa1b4/">Linkedin <img src={'/images/linkedin.png'}></img></a></li>
+                </motion.ul>
+            </Social> */}
         <Circle3 as={motion.div} viewport={{once:true}} initial={{scale:0,opacity:0}} whileInView={{opacity:1,scale:[3,1,2,1,1.5,1]}} transition={{duration:4,ease:"easeInOut"}}>
             <Circle2 as={motion.div} initial={{opacity:0}} animate={{ opacity:[1,0.1,0.2,0.6,0.4,0.1,1]}} transition={{duration:5,repeat:Infinity,repeatType: "reverse"}}>
                 <Circle1 as={motion.div} initial={{opacity:0}} animate={{ opacity:[1,0.4,0.6,0.4,1]}} transition={{duration:4,repeat:Infinity,repeatType: "reverse"}}>
@@ -50,6 +57,64 @@ const Container = styled.div`
     align-items:space-around;
     height:100vh;
     width:100vw;
+`;
+const Social = styled.div`
+    position:absolute;
+    height:100px;
+    width:100px;
+    margin-top:10px;
+    margin-left:20px;
+    cursor:pointer;
+    z-index:2;
+    a {
+        color: #fff;
+        text-decoration: none;
+      }
+    ul{
+        padding: 0px;
+        transform: translate(-270px, 0);
+    }
+    ul li {
+        display: block;
+        margin: 5px;
+        background: rgba(0, 0, 0, 0.36);
+        width: 300px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 0 30px 30px 0;
+        transition: all 1s;
+      }
+    ul li:hover {
+        transform: translate(110px, 0);
+        background: rgba(255, 255, 255, 0.4);
+      }
+    ul li:hover a {
+        color: #000;
+      }
+    ul li:hover i {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.36);
+        transform: rotate(360deg);
+        transition: all 1s;
+      }
+    ul li img {
+        margin-left: 10px;
+        color: #000;
+        background: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        background: #ffffff;
+        transform: rotate(0deg);
+      }
+      
+    //   body {
+    //     background: #4F8B89;
+    //     color: #fff;
+    //     font-family: 'Raleway', sans-serif;
+    //   }
 `;
 
 

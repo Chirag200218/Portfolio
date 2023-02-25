@@ -29,10 +29,10 @@ export const data = [
     },
     {
         id:4,
-        ProfileImg: "images/redux.png",
-        name:"Redux",
+        ProfileImg: "images/next.png",
+        name:"Next Js",
         link:"",
-        testimonial:"An alternate for prop drilling. Used for central state management in react app. Also it make states of app debuging a lot easier",
+        testimonial:"Worked on",
     },
     {
         id:5,
@@ -89,6 +89,7 @@ export const data = [
 export const project =[
     {
         id:1,
+        link:"",
         title:"Reel App",
         aboutTitle:"clone your idea",
         img:"images/instagramImg.jpg",
@@ -104,6 +105,7 @@ export const project =[
     {
         id:2,
         title:"Excel App",
+        link:"https://my-excel-ac4i.vercel.app",
         aboutTitle:"clone your idea",
         img:"images/excel.svg",
         discription:"This is about us",
@@ -118,6 +120,7 @@ export const project =[
     {
         id:3,
         title:"Linked App",
+        link:"https://your-linkedin-clone.netlify.app",
         aboutTitle:"clone your idea",
         img:"images/linkedIn.jpeg",
         discription:"This is about us",
@@ -132,6 +135,7 @@ export const project =[
     {
         id:4,
         title:"Movie Website",
+        link:"https://movie-react-app-chirag.netlify.app",
         img:"images/Movie.jpeg",
         discription:"This is about you",
         youtube:"link",

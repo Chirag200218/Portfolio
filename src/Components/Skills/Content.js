@@ -148,7 +148,6 @@ const Container = styled.div`
 const Left = styled.div`
     height:100%;
     width:27%;
-    // border:1px solid blue;
     display:flex;
     justify-content: space-around;
     flex-direction: column;

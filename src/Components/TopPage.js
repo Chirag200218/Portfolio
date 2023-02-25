@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import BackGroundCircle from './BackGroundCircle';
 import {motion} from "framer-motion";
 import {useState} from "react";
+// import styles from './social.module.scss'
 
 function TopPage() {
     const[curr,setCurr] = useState(1);
@@ -31,30 +32,14 @@ function TopPage() {
      
   return (
     <Container>
-        {/* <Cards>
-            <Card1
-             as={motion.div} initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1,rotate:"8deg"}} transition={{delay:3,duration:2}}
-              onMouseEnter={(e)=>handleHover(e,1)} onMouseLeave={(e)=>handleEffect(e,1)}>
-                <img id="1II" src="images/leetcodeImg.png"></img>
-                <img id="1I" src="images/leetcode2.png"></img>
-                <div id="1a">Has Solved 500+ problems on leetcode and currently ranked under top20% leetcode users globally.</div>
-            </Card1>
-            <Card2 
-             as={motion.div} initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1,rotate:"-6deg"}} transition={{delay:3,duration:2}}
-             onMouseEnter={(e)=>handleHover(e,2)} onMouseLeave={(e)=>handleEffect(e,2)}>
-                <img className='rotate3D' id="2II" src="images/teacherImg.png"></img>
-                <img id="2I" src="images/zoom.jpg"></img>
-                <div id="2a">Worked as Educator Associate at Geekster</div>
-            </Card2>
-            <Card3 
-             as={motion.div} initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1,rotate:"14deg"}} transition={{delay:3,duration:2}}
-            onMouseEnter={(e)=>handleHover(e,3)} onMouseLeave={(e)=>handleEffect(e,3)}>
-                <img id="3II" src="images/frontendImg.png"></img>
-                <img id="3I" src="images/front1.png"></img>
-                <div id="3a">Currently working as Frontend Intern at Geekster</div>
-            </Card3>
-        </Cards> */}
         <Deskstop>
+            <Social as={motion.div} initial={{x:-400}} viewport={{once:true}} whileInView={{x:10}} transition={{duration:4.5}}>
+                <motion.ul>
+                <li><a target="_blank" href="https://leetcode.com/Chirag_dungarwal/">Leetcode<img src={'/images/leetcode.svg'}></img></a></li>
+                <li><a target="_blank"  href="https://github.com/Chirag200218">Github <img src={'/images/github.png'}></img></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/chirag-jain-8871aa1b4/">Linkedin <img src={'/images/linkedin.png'}></img></a></li>
+                </motion.ul>
+            </Social>
             <BackGround>
                 <motion.h1
                     initial={{opacity:0,scale:1.4}} animate={{opacity:1,scale:1}}
@@ -97,6 +82,64 @@ const Deskstop = styled.div`
         display:none;
     }
     
+`;
+const Social = styled.div`
+    position:absolute;
+    height:500px;
+    width:500px;
+    margin-top:10px;
+    margin-left:20px;
+    cursor:pointer;
+    z-index:2;
+    a {
+        color: #fff;
+        text-decoration: none;
+      }
+    ul{
+        padding: 0px;
+        transform: translate(-270px, 0);
+    }
+    ul li {
+        display: block;
+        margin: 5px;
+        background: rgba(0, 0, 0, 0.36);
+        width: 300px;
+        text-align: right;
+        padding: 10px;
+        border-radius: 0 30px 30px 0;
+        transition: all 1s;
+      }
+    ul li:hover {
+        transform: translate(110px, 0);
+        background: rgba(255, 255, 255, 0.4);
+      }
+    ul li:hover a {
+        color: #000;
+      }
+    ul li:hover i {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.36);
+        transform: rotate(360deg);
+        transition: all 1s;
+      }
+    ul li img {
+        margin-left: 10px;
+        color: #000;
+        background: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        background: #ffffff;
+        transform: rotate(0deg);
+      }
+      
+    //   body {
+    //     background: #4F8B89;
+    //     color: #fff;
+    //     font-family: 'Raleway', sans-serif;
+    //   }
 `;
 const Container = styled.div`
     position:relative;

@@ -112,7 +112,7 @@ const Section = styled.div`
     height: 80%;
     width: 90%;
     z-index: 1;
-    margin-top:6rem;
+    margin-top:8rem;
     // border: 1px solid red;
     display:flex;
     align-items:center;
@@ -128,7 +128,7 @@ const Section = styled.div`
         flex-direction: column;
         overflow-y: scroll;
         width: 90%;
-        height: 88%;
+        height: 84%;
         // border: 1px solid red;
         ::-webkit-scrollbar {
             display: none;
