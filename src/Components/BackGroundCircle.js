@@ -207,7 +207,7 @@ const Second = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: transparent;
         /* stroke: wheat; */
     -webkit-text-stroke: 0.2px white;

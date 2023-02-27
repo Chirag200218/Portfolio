@@ -87,7 +87,7 @@ const Content = styled.div`
         height:80%;
     }
     @media (max-width: 550px) {
-       height:35rem;
+       height:32rem;
        width: 90%;
        flex-direction:column;
    }
@@ -142,9 +142,10 @@ const Guide = styled.div`
         cursor:pointer;
         // margin-top: 6%;
         // border: 1px solid red;
+        margin-bottom:30px;
         img{
         
-            width: 5rem;
+            width: 3rem;
             filter: contrast(0.3);
         }
     }

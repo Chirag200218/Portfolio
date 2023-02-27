@@ -93,9 +93,7 @@ function About() {
         </ContentBox>
         </Laptop>
         <Mobile>
-            {/* <GIFImage as={motion.div} viewport={{once:true}} intial={{x:-100}} whileInView={{x:10}} transition={{duration:10}}>
-              <img src={'images/hii.gif'}></img>
-            </GIFImage> */}
+             
             <AnimatePresence>
               {type==="About" && (
                 <Work>
@@ -106,7 +104,7 @@ function About() {
             </AnimatePresence>
             <AnimatePresence>
                 {type==="Education" && (
-                  <Work as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.9 ,ease:["linear"] ,type: 'spring',stiffness: 70}}> 
+                  <Work as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.6 ,ease:["linear"] ,type: 'spring',stiffness: 70}}> 
                     <OuterCircle>
                       <InnerCircle style={{height:"110px",width:"110px"}}>
                          <img src={"/images/CA.png"} style={{scale:"1.2"}}></img>
@@ -145,7 +143,7 @@ function About() {
             </AnimatePresence>
             <AnimatePresence>
                 {type==="Experience" && (
-                  <Work id="scrollable" as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:1.2,ease: ["linear"],type:'spring',stiffness:70}} style={{overflow:"scroll",cursor:"pointer",padding:"10px"}}> 
+                  <Work id="scrollable" as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.6,ease: ["linear"],type:'spring',stiffness:70}} style={{overflow:"scroll",cursor:"pointer",padding:"10px"}}> 
                      <Openbox onClick={(e)=>{work==="one"?setWork(""):setWork("one"); view(e,"one")}} id="one">
                         <div style={{height:"90px",position:"relative",padding:"10px"}}>
                           <h3 style={{width:"70%",wordBreak:"break-word"}}>Teaching Associate</h3>
@@ -403,7 +401,7 @@ const Mobile = styled.div`
 const Base = styled.div`
     position:absolute;
     bottom:0px;
-    height:27%;
+    height:30%;
     width:100%;
     // border:1px solid red;
     border-radius: 12px 12px 0px 0px;
@@ -414,7 +412,7 @@ const Base = styled.div`
     background-color: rgba(77,77,77,0.4);
 `;
 const ResumeBox=styled.div` 
-    margin-top:8px;
+    margin-top:10px;
     width:90%;
     height:40px;
     // border:1px solid red;
@@ -433,13 +431,9 @@ const ResumeBox=styled.div`
       border-radius:25px;
       background-color:rgba(0,0,0,0.4);
       color:#d0d0d0;
+      border:1px solid black;
     }
 `
-const GIFImage = styled.div`
-    position:absolute;
-    left:-50px;
-    bottom:20%;
-`;
 const TitleBox = styled.div`
     height:85px;
     width:29%;
@@ -452,8 +446,9 @@ const TitleBox = styled.div`
     transition:0.1s;
     color:#473c33;
     font-weight:400;
+    margin-bottom:25px;
     img{
-      margin-top:20px;
+      margin-top:10px;
       height:24px;
       width:24px;
     }
@@ -577,8 +572,8 @@ const App = styled.div`
     color:white;  
 `;
 const Content = styled.div`
-    height:240px;
-    width:250px;
+    height:220px;
+    width:220px;
     // border:1px solid red;
     border-radius:15px;
     display:flex;
