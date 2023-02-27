@@ -162,15 +162,11 @@ const Wrapper = styled.div`
     align-items:center;
     justify-content: space-evenly;
     img{
-        height: 34%;
-        width: 38%;
+        height: 160px;
+        width: 165px;
         border-radius:50%;
     }
     @media only screen and (max-width: 410px) {
-        img{
-            height:32%;
-        }
-        
         width: 90%;
     }
 `;
@@ -207,11 +203,12 @@ const Second = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: transparent;
         /* stroke: wheat; */
     -webkit-text-stroke: 0.2px white;
-    font-weight:700;
+    font-weight:bold;
+    font-family: sans-serif;
     @media only screen and (max-width: 410px) {
         font-size: 3.7rem;
     }

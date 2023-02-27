@@ -231,7 +231,7 @@ background: url(http://assets.iceable.com/img/noise-transparent.png);
   &:nth-child(1){
     z-index:3;
     position:absolute;
-    top:3%;
+    top:30px;
     left: 30px;
     height:130px;
     width:130px;
@@ -244,7 +244,7 @@ background: url(http://assets.iceable.com/img/noise-transparent.png);
   &:nth-child(2){
     z-index:4;
     position:absolute;
-    top: 34%;
+    top: 158px;
     left: 152px;
     height:135px;
     width:135px;
@@ -260,7 +260,7 @@ background: url(http://assets.iceable.com/img/noise-transparent.png);
     position: absolute;
     left: 7px;
     height: 150px;
-    top: 60%;
+    top: 280px;
     width: 150px;
     background-color: #494949;
     border-radius: 50%;
