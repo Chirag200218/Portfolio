@@ -37,13 +37,13 @@ function ProjectDetail() {
         </Header>
         <Laptop><iframe></iframe></Laptop>
         <Links>
-            <button>Live Website</button>
-            <button>Source Code</button>
+            <motion.button whileTap={{scale:"0.8"}}>Live Website</motion.button>
+            <motion.button whileTap={{scale:"0.8"}}>Source Code</motion.button>
         </Links>
         <Tech>
             <div>Tech Used</div>
             <div>
-               {TechUsed}
+                {TechUsed}
             </div>
            
         </Tech>
@@ -58,7 +58,7 @@ function ProjectDetail() {
 
 const Container = styled.div`
     width:100%;
-    height:auto;
+    height:fit-content;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -68,22 +68,19 @@ const Container = styled.div`
 
 const Header = styled.div`
     height:20vh;
-    width:50vw;
+    width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
-    @media only screen and (max-width: 430px) {
-        height:10vh;
-    }
 
     div:nth-of-type(1){
-        color:#ffa400;
+        color:#fec868;
         font-size: 5rem;
         margin-top:1%;
         font-family: 'GT Sectra Display','Times New Roman',sans-serif;
-        @media only screen and (max-width: 430px) {
-            font-size: 2.7rem;
-            margin-top:15%;
+        @media only screen and (max-width: 600px) {
+            font-size: 5rem;
+            margin-top:15px;
         }
     }
     div:nth-of-type(2){
@@ -99,24 +96,25 @@ const Header = styled.div`
 `;
 
 const Laptop = styled.div`
-    height:75vh;
-    width:70vw;
+    height:500px;
+    width:800px;
     position:relative;
     // border: 1px solid red;
     background-image:url("images/laptop.png");
     background-size: contain;
     background-position: center;
     background-repeat: space;
-    @media only screen and (max-width: 430px) {
-        height:45vh;
-        width:90vw;
+    @media only screen and (max-width: 600px) {
+        height: 225px;
+        width: 330px;
     }
     iframe{    
         position: absolute;
-        top: 5%;
-        left: 16%;
-        height: 79%;
-        width: 68%;
+        top: 23px;
+        left: 90px;
+        height: 400px;
+        width: 620px;
+        border-radius:18px;
         @media only screen and (max-width: 1025px) {
             top: 6%;
             left: 12%;
@@ -131,11 +129,12 @@ const Laptop = styled.div`
             width: 77%;        
         }
 
-        @media only screen and (max-width: 430px) {
-            top: 18%;
-            left: 12%;
-            height: 58%;
-            width: 77%;       
+        @media only screen and (max-width: 600px) {       
+            top: 17px;
+            left: 37px;
+            height: 170px;
+            width: 259px;
+            border-radius: 10px;   
         }
     }
 
@@ -163,10 +162,7 @@ const Links = styled.div`
             border:1px solid white;
         }
         @media only screen and (max-width: 770px) {
-            width:28%;    
-        }
-        @media only screen and (max-width: 770px) {
-            width:31%;   
+            width:165px;   
             font-size: 2rem;
         }
     }
@@ -174,18 +170,17 @@ const Links = styled.div`
 
 `;
 const Tech = styled.div`
-    width:60vw;
-    height:30vh;
-    // border: 1px solid red;
+    width:100%;
+    // border:1px solid red;
+    height:fit-content;
     display:flex;
     flex-direction:column;
     align-items:center;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
     div:nth-of-type(1){
-        color:#ffa400;
+        color:#fec868;
         font-size: 5rem;
         height: 28%;
-
         margin-top:1%;
         @media only screen and (max-width: 430px) {
             font-size: 3rem;
@@ -198,7 +193,7 @@ const Tech = styled.div`
         height:70%;
         width:100%;
         display:flex;
-        color:#c99943;
+        color: #2d9687;
         justify-content:space-evenly;
         align-items:center;
         flex-wrap: wrap;
@@ -216,14 +211,14 @@ const Tech = styled.div`
 `;
 
 const Features = styled.div`
-    height:auto;
-    width:80%;
+    height:fit-content;
+    width:96%;
     display:flex;
     flex-direction:column;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
     align-items:center;
     h1{
-        color:#ffa400;
+        color:#fec868;
         font-size: 5rem;
         height: 28%;
         margin-top:1%;

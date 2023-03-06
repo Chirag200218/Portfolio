@@ -3,7 +3,7 @@ import { motion, useCycle } from "framer-motion";
 import Navigation from "./Navigation";
 import { MenuToggle } from "./MenuToggle";
 import { useDimensions } from "./useDimensions";
-import style from './style.css';
+import style from './style1.css';
 import Show from './show.css'
 import styled from "styled-components";
 

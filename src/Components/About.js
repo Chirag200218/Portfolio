@@ -38,6 +38,7 @@ function About() {
             <Decision onClick={()=>setType("Experience")} style={{backgroundColor:type==="Experience"?"#fec868":"transparent"}}>Experience</Decision>
         </DecisionBox>
         <ContentBox>
+            
             {
               type==="About" && 
               (<AboutBox>
@@ -48,19 +49,28 @@ function About() {
             {
               type==="Experience" &&
               <BackImage>
+                 <AeroPlane><span>✈️</span></AeroPlane>
                 <Content>
                 <img src={'/images/geek.png'} alt="chirag"></img>
                   <h3>Teaching Associate</h3>
                   <h5>Geekster</h5>
                   <span>Nov,2022-Dec,2022</span>
-                  <App>Worked as odfp ipdfjd ip</App>
+                  <App style={{justifyContent:"space-around"}}> 
+                    <p style={{fontSize:"13px"}}>🌟took regular live and remedial classes for 70+ students in java/DSA.</p>
+                    <p style={{fontSize:"13px"}}>🌟Helped 250+ students by debugging their codes and solved their doubts.</p>
+                    <p style={{fontSize:"13px"}}>🌟Created 300+ problems based on Java/DSA.</p>
+                  </App>
                 </Content>  
                 <Content>
                   <img src={'/images/geek.png'} alt="chirag"></img>
                   <h3>SDE INTERN</h3>
                   <h5>Geekster</h5>
                   <span>july,2022-oct,2022</span>
-                  <App>Worked as odfp ipdfjd ip</App>
+                  <App style={{justifyContent:"space-around"}}> 
+                    <p style={{fontSize:"13px"}}>🌟revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</p>
+                    <p style={{fontSize:"13px"}}>🌟Fixed bugs and optimized website perfomance and speed.</p>
+                    <p style={{fontSize:"13px"}}>🌟implement productive design to make data more highlighted and clear to audience.</p>
+                  </App>
                 </Content>
               </BackImage>
             }
@@ -71,20 +81,33 @@ function About() {
                 <img src={'/images/CA.png'} alt="chirag"></img>
                   <h3>Matric, 2018 </h3>
                   <h5>Central Academy, Chittor</h5>
-                  <App>Worked as odfp ipdfjd ip</App>
+                  <App style={{textAlign:"center"}}>
+                    <p style={{fontSize:"18px"}}>10th class</p>
+                    <p style={{fontSize:"12px"}}>2017-18</p>
+                    <p style={{fontSize:"18px"}}>Got Best Student Award,state level in Kho-kho,table tennis</p>
+                  </App>
               </Content>
               <Content>
                 <img src={'/images/CA.png'} alt="chirag"></img>
                   <h3>Secondary, 2020 </h3>
                   <h5>Central Academy, Chittor</h5>
-                  <App>Worked as odfp ipdfjd ip</App>
+                  <App style={{textAlign:"center"}}>
+                    <p style={{fontSize:"18px"}}>12th class</p>
+                    <p style={{fontSize:"12px"}}>2019-20</p>
+                    <p style={{fontSize:"18px"}}>Percentage: 95%</p>
+                  </App>
               </Content>
               <Content>
               <img src={'/images/skit.png'} alt="chirag"></img>
                 <h3>Btech, CSE</h3>
                 <h5>SKIT, Jaipur</h5>
                 <span>2020-24</span>
-                <App>Worked as odfp ipdfjd ip</App>
+                <App style={{textAlign:"center"}}>
+                  <p style={{fontSize:"18px"}}>B.tech CSE</p>
+                  <p style={{fontSize:"12px"}}>2020-2024</p>
+                  <p style={{fontSize:"18px"}}>CGPA: 9.5</p>
+                  <p style={{fontSize:"18px"}}>Won multiple university TT champioship and taught 300+ juniors coding through college clubs</p>
+                </App>
               </Content>
 
               </BackImage>
@@ -104,7 +127,7 @@ function About() {
             </AnimatePresence>
             <AnimatePresence>
                 {type==="Education" && (
-                  <Work as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.6 ,ease:["linear"] ,type: 'spring',stiffness: 70}}> 
+                  <Work as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3,ease:["linear"] ,type: 'spring',stiffness: 70}}> 
                     <OuterCircle>
                       <InnerCircle style={{height:"110px",width:"110px"}}>
                          <img src={"/images/CA.png"} style={{scale:"1.2"}}></img>
@@ -144,6 +167,22 @@ function About() {
             <AnimatePresence>
                 {type==="Experience" && (
                   <Work id="scrollable" as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.6,ease: ["linear"],type:'spring',stiffness:70}} style={{overflow:"scroll",cursor:"pointer",padding:"10px"}}> 
+                  <Openbox onClick={(e)=>{work==="two"?setWork(""):setWork("two");view(e,"two")}} id="two">
+                        <div style={{height:"90px",position:"relative",padding:"10px"}}>
+                          <h3 style={{width:"70%",wordBreak:"break-word"}}>SDE Intern</h3>
+                          <span>Oct,2022-Dec,2022</span>
+                          <img style={{position:"absolute",height:"80%",top:"10px",right:"10px"}} src={"/images/geek.png"}></img>
+                        </div>
+                        {work==="two" && (
+                          <Expand >
+                             <ul>
+                                <li>revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</li>
+                                <li> Fixed bugs and optimized website perfomance and speed.</li>
+                                <li>implement productive design to make data more highlighted and clear to audience.</li>
+                              </ul>
+                          </Expand>
+                        )}
+                     </Openbox>
                      <Openbox onClick={(e)=>{work==="one"?setWork(""):setWork("one"); view(e,"one")}} id="one">
                         <div style={{height:"90px",position:"relative",padding:"10px"}}>
                           <h3 style={{width:"70%",wordBreak:"break-word"}}>Teaching Associate</h3>
@@ -152,22 +191,15 @@ function About() {
                         </div>
                         {work==="one" && (
                           <Expand> 
-
+                              <ul>
+                                <li>took regular live and remedial classes for 70+ students in java/DSA.</li>
+                                <li>Helped 250+ students by debugging their codes and solved their doubts.</li>
+                                <li>Created 300+ problems based on Java/DSA.</li>
+                              </ul>
                           </Expand>
                         )}
                      </Openbox>
-                     <Openbox onClick={(e)=>{work==="two"?setWork(""):setWork("two");view(e,"two")}} id="two">
-                        <div style={{height:"90px",position:"relative",padding:"10px"}}>
-                          <h3 style={{width:"70%",wordBreak:"break-word"}}>SDE Intern</h3>
-                          <span>Oct,2022-Dec,2022</span>
-                          <img style={{position:"absolute",height:"80%",top:"10px",right:"10px"}} src={"/images/geek.png"}></img>
-                        </div>
-                        {work==="two" && (
-                          <Expand >
-
-                          </Expand>
-                        )}
-                     </Openbox>
+                     
                   </Work>
                 )}
             </AnimatePresence>
@@ -194,11 +226,43 @@ function About() {
   )
 }
 
+const AeroPlane = styled.div`
+position: absolute;
+left: 50%;
+top: 25%;
+transform: rotate(24deg);
+  span{
+    font-size:35px;
+  }
+`;
 const Expand = styled.div`
-  height:300px;
+  height:fit-content;
   border-top:1px solid #473c33;
-  opacity:0.3;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  background-color:rgba(217,217,217,0.3);
+   box-shadow: rgb(0 0 0 / 35%) 0px -32px 22px -28px inset;
+  padding:8px;
+  padding-bottom:12px;
+  ul{
+    position:static;
+    padding:0px;
+    margin:0px;
+    li{
+      position:relative;
+      margin-bottom:8px;
+      width: 250px;
+      margin-left:15px;
+    }
+    li:before{
+      position:absolute;
+      content:">";
+      top:0px;  
+      left: -15px;
+      font-size: 18px;
+      font-family: monospace;
+      font-weight: 600;
+
+    }
+  }
 `;
 const Openbox =styled.div`
   height:fit-content;
@@ -563,10 +627,12 @@ const App = styled.div`
     display:none;
     position:absolute;
     z-index:1;
+    flex-direction:column;
+    justify-content:center;
     border-radius:14px;
     height:100%;
     width:100%;
-    text-align:center;
+
     padding:10px;
     transition:0.6s;
     color:white;  
@@ -595,7 +661,7 @@ const Content = styled.div`
     }
     &:hover{
       & > ${App}{
-        display:block;   
+        display:flex;
       }
       scale:1.1;
       background-color:#74541a; 

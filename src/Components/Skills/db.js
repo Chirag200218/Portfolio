@@ -4,7 +4,7 @@ export const data = [
         ProfileImg: "images/html.png",
         name:"HTML",
         link:"",
-        testimonial:"Learned how to structure the web pages and its content.",
+        testimonial:"got my hand dirty in world of web development with html. Used for giving structures to my web pages and effectively placing the content.",
     },
     {
         id:1,
@@ -32,7 +32,7 @@ export const data = [
         ProfileImg: "images/next.png",
         name:"Next Js",
         link:"",
-        testimonial:"Worked on",
+        testimonial:"having hands-on experience with next js. Created multiple projects using next js and have created complex web designs using next js in geekster organizations.",
     },
     {
         id:5,
@@ -53,28 +53,28 @@ export const data = [
         ProfileImg: "images/java.png",
         name:"Java",
         link:"",
-        testimonial:"",
+        testimonial:"have solved 1000+dsa problems in java. Loved it because of treating most data type as an object and which make it easy to use. Has completed abdul bari sir java course from udemy",
     },
     {
         id:8,
         ProfileImg: "images/DSA.png",
         name:"DSA",
         link:"",
-        testimonial:"What a wonderful journey I had at Geekster! To be honest they exceeded my expectations. I would have never imagined a 294% hike in the beginning of my career. But Geekster made it happen...",
+        testimonial:"working hard over my problem solving skills. Had solved over 1000+ problems. Having 4* on codechef and 1800+ rating on leetcode. Hascompleted self paced course of gfg also.",
     },
     {
         id:9,
         ProfileImg: "images/TypeScript.png",
         name:"TypeScript",
         link:"",
-        testimonial:"I have had a great learning experience with Geekster. They not just focus on technical skills but prepare us for interviews through soft-skills training as well. The detailed courses, coding assigments, demo projects, and mock interviews help us get a good job opportunity...",
+        testimonial:"having hands-on experience with Typescript. It helped to improve variable readability and helped to decrease chances of errors in code.",
     },
     {
         id:10,
         ProfileImg: "images/nodeJS.png",
         name:"Node js",
         link:"",
-        testimonial:"I have had a great learning experience with Geekster. They not just focus on technical skills but prepare us for interviews through soft-skills training as well. The detailed courses, coding assigments, demo projects, and mock interviews help us get a good job opportunity...",
+        testimonial:" have used basic built in modules of node js to access the window directly to automate some tasks. Modules like fs,path,http,etc.",
     },
     {
         id:11,
@@ -97,9 +97,9 @@ export const project =[
         youtube:"link",
         Tech:["html","css","js","react","redux"],
         features:{
-            Click:"fiwfjfjreferiojg fierji",
-            Tap:"ofjeiojw oefjiojefi",
-            hover:"kifejf pwiijfpew p9jfewpo -ppewj"
+            Click:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            Tap:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            hover:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         }
     },
     {
@@ -110,11 +110,11 @@ export const project =[
         img:"images/excel.svg",
         discription:"This is about us",
         youtube:"link",
-        Tech:["html","css","js","react","redux"],
+        Tech:["html","css","js"],
         features:{
-            Click:"fiwfjfjreferiojg fierji",
-            Tap:"ofjeiojw oefjiojefi",
-            hover:"kifejf pwiijfpew p9jfewpo -ppewj"
+            Click:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            Tap:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            hover:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         }
     },
     {
@@ -127,9 +127,9 @@ export const project =[
         youtube:"link",
         Tech:["html","css","js","react","redux"],
         features:{
-            Click:"fiwfjfjreferiojg fierji",
-            Tap:"ofjeiojw oefjiojefi",
-            hover:"kifejf pwiijfpew p9jfewpo -ppewj"
+            Click:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            Tap:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            hover:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         },
     },
     {
@@ -139,11 +139,11 @@ export const project =[
         img:"images/Movie.jpeg",
         discription:"This is about you",
         youtube:"link",
-        Tech:["html","css","js","react","redux"],
+        Tech:["html","css","js","react"],
         features:{
-            Click:"fiwfjfjreferiojg fierji",
-            Tap:"ofjeiojw oefjiojefi",
-            hover:"kifejf pwiijfpew p9jfewpo -ppewj"
+            Click:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            Tap:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            hover:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         },
     },
     {
@@ -154,9 +154,9 @@ export const project =[
         youtube:"link",
         Tech:["html","css","js","react","redux"],
         features:{
-            Click:"fiwfjfjreferiojg fierji",
-            Tap:"ofjeiojw oefjiojefi",
-            hover:"kifejf pwiijfpew p9jfewpo -ppewj"
+            Click:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            Tap:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            hover:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
         },
     },
     // {
