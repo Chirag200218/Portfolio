@@ -37,7 +37,7 @@ function TopPage() {
                 <motion.ul>
                 <li><a target="_blank" href="https://leetcode.com/Chirag_dungarwal/">Leetcode<img src={'/images/leetcode.svg'}></img></a></li>
                 <li><a target="_blank"  href="https://github.com/Chirag200218">Github <img src={'/images/github.png'}></img></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/chirag-jain-8871aa1b4/">Linkedin <img src={'/images/linkedin.png'}></img></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/chirag-jain-8871aa1b4/">Linkedin <img src={'/images/linked.png'}></img></a></li>
                 </motion.ul>
             </Social>
             <BackGround>
@@ -126,20 +126,15 @@ const Social = styled.div`
         margin-left: 10px;
         color: #000;
         background: #fff;
-        padding: 10px;
+        padding: 8px;
         border-radius: 50%;
         width: 48px;
-        height: 48px;
-        font-size: 20px;
+        height:48px;
+        font-size: 12px;
         background: #ffffff;
         transform: rotate(0deg);
       }
-      
-    //   body {
-    //     background: #4F8B89;
-    //     color: #fff;
-    //     font-family: 'Raleway', sans-serif;
-    //   }
+    
 `;
 const Container = styled.div`
     position:relative;

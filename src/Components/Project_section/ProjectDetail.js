@@ -217,6 +217,10 @@ const Features = styled.div`
     flex-direction:column;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
     align-items:center;
+    overflow:hidden;
+    @media only screen and (max-width: 430px) {
+        font-size:13px;
+    }
     h1{
         color:#fec868;
         font-size: 5rem;
@@ -228,6 +232,8 @@ const Features = styled.div`
             margin-top:6%;
         }
     }
+
+
 `;
 
 const Topic = styled.div`
@@ -235,8 +241,10 @@ const Topic = styled.div`
     height:30vh;
     width:96%;
     margin:1%;
+    padding:3px;
     border:1px solid #ff0055;
-    // overflow: hidden;
+    overflow: hidden;
+
 `;
 
 const TitleName = styled.div`
@@ -254,13 +262,13 @@ const TitleName = styled.div`
 const Info = styled.div`
     height: 80%;
     font-size:2rem;
-    padding:1%;
     // text-align:center;
     color:white;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
+    overflow:scroll;
      
     @media only screen and (max-width: 770px) { 
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }`;
 
 
