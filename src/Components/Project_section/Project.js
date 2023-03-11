@@ -25,11 +25,11 @@ function Project(proj) {
         cursorRounded.style.display="none";
     }
 
-    const Data =  project.map((proj)=>{
+    const Data =  project.map((proj,idx)=>{
         let img = proj.img;
         return(
-            <Work onClick={()=>handleClick(proj)} key={proj.id} id={proj.id}  onMouseMove={(e)=>handleCursor(e)} onMouseLeave={closeCursor}>
-                <Img style={{ backgroundImage:`url(${img})` , width:"0%"} } as ={motion.div} layout   viewport={{ once: true }}   whileInView={{width:"100%"}} transition={{duration:2}}>                </Img>
+            <Work style={{}} onClick={()=>handleClick(proj)} key={proj.id} id={proj.id}  onMouseMove={(e)=>handleCursor(e)} onMouseLeave={closeCursor}>
+                <Img style={{backgroundSize:idx===0?"contain":"cover", backgroundImage:`url(${img})` , width:"0%"} } as ={motion.div} layout   viewport={{ once: true }}   whileInView={{width:"100%"}} transition={{duration:2}}></Img>
                 <App>{proj.title}</App>
                 <Id as={motion.div} viewport={{ once: true }} initial={{opacity:0,y:200}} whileInView={{opacity:1,y:0}} transition={{duration:1.5}}>{proj.id}</Id>
             </Work>
@@ -161,7 +161,7 @@ const Img= styled.div`
     display:block;
     background-color:white;
     background-repeat: no-repeat;
-    background-size: cover;
+    // background-size: cover;
     background-position: center;
     // opacity:0.7;
     display:flex;

@@ -127,7 +127,7 @@ function About() {
             </AnimatePresence>
             <AnimatePresence>
                 {type==="Education" && (
-                  <Work as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3,stiffness:100}}> 
+                  <Work as={motion.div} viewport={{once:true}} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3,stiffness:100}}> 
                     <OuterCircle>
                       <InnerCircle style={{height:"110px",width:"110px"}}>
                          <img src={"/images/CA.png"} style={{scale:"1.2"}}></img>
@@ -166,7 +166,7 @@ function About() {
             </AnimatePresence>
             <AnimatePresence>
                 {type==="Experience" && (
-                  <Work id="scrollable" as={motion.div} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3}} style={{overflow:"scroll",cursor:"pointer",padding:"10px"}}> 
+                  <Work id="scrollable" as={motion.div} viewport={{once:true}} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3}} style={{overflow:"scroll",cursor:"pointer",padding:"10px"}}> 
                   <Openbox onClick={(e)=>{work==="two"?setWork(""):setWork("two");view(e,"two")}} id="two">
                         <div style={{height:"90px",position:"relative",padding:"10px"}}>
                           <h3 style={{width:"70%",wordBreak:"break-word"}}>SDE Intern</h3>

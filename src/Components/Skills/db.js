@@ -89,6 +89,21 @@ export const data = [
 export const project =[
     {
         id:1,
+        title:"CollabIn",
+        link:"https://my-excel-ac4i.vercel.app",
+        aboutTitle:"clone your idea",
+        img:"images/collab.png",
+        discription:"This is about us",
+        youtube:"link",
+        Tech:["html","css","js"],
+        features:{
+            Click:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            Tap:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            hover:"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+        }
+    },
+    {
+        id:2,
         link:"",
         title:"Reel App",
         aboutTitle:"clone your idea",
@@ -103,7 +118,7 @@ export const project =[
         }
     },
     {
-        id:2,
+        id:3,
         title:"Excel App",
         link:"https://my-excel-ac4i.vercel.app",
         aboutTitle:"clone your idea",
@@ -118,11 +133,11 @@ export const project =[
         }
     },
     {
-        id:3,
+        id:4,
         title:"Linked App",
         link:"https://your-linkedin-clone.netlify.app",
         aboutTitle:"clone your idea",
-        img:"images/linkedIn.jpeg",
+        img:"images/linkedLogo.png",
         discription:"This is about us",
         youtube:"link",
         Tech:["html","css","js","react","redux"],
@@ -133,7 +148,7 @@ export const project =[
         },
     },
     {
-        id:4,
+        id:5,
         title:"Movie Website",
         link:"https://movie-react-app-chirag.netlify.app",
         img:"images/Movie.jpeg",
@@ -147,7 +162,7 @@ export const project =[
         },
     },
     {
-        id:5,
+        id:6,
         title:"Todo Website",
         img:"images/Todo.jpg",
         discription:"This is about you",

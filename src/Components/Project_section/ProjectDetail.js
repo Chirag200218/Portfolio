@@ -147,8 +147,9 @@ const Links = styled.div`
     // border: 1px solid red;
     display: flex;
     justify-content: space-evenly;
-    
+    margin-bottom:15px;
     button{
+        position:relative;
         width:20%;
         background:transparent;
         border:none
@@ -157,8 +158,9 @@ const Links = styled.div`
         font-size: 3rem;
         transition:1s;
         cursor:pointer;
+        z-index:2;
         &:hover{
-            scale:1.1;
+            scale:1.05;
             border:1px solid white;
         }
         @media only screen and (max-width: 770px) {
@@ -232,8 +234,6 @@ const Features = styled.div`
             margin-top:6%;
         }
     }
-
-
 `;
 
 const Topic = styled.div`
@@ -253,9 +253,11 @@ const TitleName = styled.div`
     font-size: 3.5rem;
     height: 20%;
     padding:0% 1%; 
+    margin-bottom:8px;
     @media only screen and (max-width: 430px) {
         font-size: 2rem;
         padding:0% 2%;
+        margin-bottom:0px;
     }
 `;
 
@@ -266,9 +268,12 @@ const Info = styled.div`
     color:white;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
     overflow:scroll;
-     
+      ::-webkit-scrollbar {
+        display: none;
+    }
     @media only screen and (max-width: 770px) { 
         font-size: 1.4rem;
+        padding:0% 2%;
     }`;
 
 
