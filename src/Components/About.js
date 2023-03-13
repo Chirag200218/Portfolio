@@ -42,8 +42,10 @@ function About() {
             {
               type==="About" && 
               (<AboutBox>
-                <span>Chirag is persuing B.tech in Computer Science from SKIT,Jaipur.He has worked with geekster as a SDE intern and teaching associate.</span>
-                <span>Chirag is fueled by his passion to learn and grow pierjgp prj gjerogjpgjer gigjre gerpijg perregjergpre erigjerp gjer igijt pfrjgprjg pigj repigj petigj tetpigjtrpigjtpogj potg</span>
+                <p>I am persuing B.tech in Computer Science from SKIT,Jaipur. Has worked previously with ed-tech company Geekster as a teaching associate and SDE intern, where I worked on frontend technologies gaining hands-on experience with software development methodologies and tools.</p>
+                <p>My passion for software development fuels my desire to continuously learn and grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing system, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
+                   My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1800+ rating in leetcode contests and 4🌟 on codechef.</p>
+                <p>Throughout my academic journey, I have consistently achieved excellent grades, demonstrating my dedication and commitment to learning. have participated in various hackathons and coding competitions, where I have collaborated with other developers and put my skills to the test in real-world scenarios. In my free time, I enjoy building small-scale projects, teaching my fellow-mates, juniors and play table tennis.</p>
               </AboutBox>)
             }
             {
@@ -119,15 +121,17 @@ function About() {
              
             <AnimatePresence>
               {type==="About" && (
-                <Work>
-                  <p style={{color:"white"}}>wvfwkvifojv oghfh boivjf vfou oiufhvfe voi vfoivh vojfjdvn fo dfoivih foih fivh oifv  oirfh iofhfv rfoviherovi hphjfv ovh er fvihj efiohj e</p>
-                  <p>pipjeripj ferj fpwojf rpifj prf prifj rpifj pir jf rwpj rwpj rfpifjwr fipjrw familyprwifj rpfjprfjpirjfprjfpjrjpirjij rpjrif rfijrfpi jrifpjripjiprjiprjif rpijfirp</p>
+                <Work style={{width:"350px"}}as={motion.div}  initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}}>
+                 <p style={{color:"rgba(243, 229, 177, 0.99)"}}>I am persuing B.tech in Computer Science from SKIT, Jaipur. Has worked previously with Geekster as a teaching associate and SDE intern, where I worked on frontend technologies gaining hands-on experience with software development methodologies and tools.</p>
+                <p style={{color:"rgba(243, 229, 177, 0.80)"}}>My passion for software development fuels my desire to continuously grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
+                   My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1800+ rating in leetcode contests and 4🌟 on codechef.</p>
+                <p style={{color:"rgba(243, 229, 177, 0.99)"}}>Throughout my academics, I have consistently achieved excellent grades. have participated in various hackathons and coding competitions, where I have collaborated with other developers and put my skills to the test in real-world scenarios. In my free time, I enjoy building small-scale projects, teaching my fellow-mates, juniors and play table tennis.</p>
                 </Work>
               )}
             </AnimatePresence>
             <AnimatePresence>
                 {type==="Education" && (
-                  <Work as={motion.div} viewport={{once:true}} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3,stiffness:100}}> 
+                  <Work as={motion.div} viewport={{once:true}} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3}}> 
                     <OuterCircle>
                       <InnerCircle style={{height:"110px",width:"110px"}}>
                          <img src={"/images/CA.png"} style={{scale:"1.2"}}></img>
@@ -156,7 +160,7 @@ function About() {
                           <p style={{fontSize:"10px"}}>B.tech CSE</p>
                           <p style={{fontSize:"8px"}}>2020-2024</p>
                           <p style={{fontSize:"9px"}}>CGPA: 9.5</p>
-                          <p style={{fontSize:"9px"}}>Won multiple university TT champioship and taught 300+ juniors coding through college clubs</p>
+                          <p style={{fontSize:"8px"}}>Won multiple university TT champioship and taught 300+ juniors coding through college clubs</p>
                         </div>
                       </InnerCircle>
                       <Stick2></Stick2>
@@ -276,13 +280,20 @@ const Openbox =styled.div`
 const Work = styled.div`
   height:70%;
   width:300px;
-  margin-top:5%;
+  // border:1px solid red;
+  margin-top:3%;
   left: 0; 
   right: 0; 
   position:absolute;
   margin-left: auto; 
   margin-right: auto; 
   // border:1px solid red;
+   
+  p{
+    font-size:14.5px;
+    margin-bottom:4px;
+  }
+  
   &::-webkit-scrollbar {
     display: none;
   }
@@ -434,12 +445,12 @@ transform: rotate(40deg);
 }
 `;
 const Container = styled.div`
-    height:100vh;
+    height:100%;
     width:100%;
     position:relative;
     scroll-snap-align: start;
     display:flex;
-     flex-direction: column;
+    flex-direction: column;
     @media only screen and (max-width: 430px) {
       justify-content: flex-end;
   }
@@ -598,18 +609,18 @@ z-index:3;
     width: 80rem;
     position: absolute;
     right: 10px;
-    bottom: 0px;
+    bottom: -20px;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
     // border: 1px solid red;
-    font-size: 30rem;
+    font-size: 28rem;
     font-weight: bolder;
     color: transparent;
     text-shadow: 0.02em 0.02em 0.01em rgb(0 0 0 / 25%), 0 0 0 #191919;
    
-    @media only screen and (max-width: 1030px) {
-      width: 57rem;
-      font-size: 21rem;
-      height: 22rem;
+    @media only screen and (max-width: 1300px) {
+      font-size: 27rem;
+      bottom:-40px;
+      right:-40px;
     }
 
     @media only screen and (max-width: 770px) {
@@ -676,9 +687,11 @@ const AboutBox= styled.div`
     height:100%;
     width:100%;
     padding:20px;
-    span{
+    padding-top:40px;
+    p{
       color:#fec868;
-      font-size:16px;
+      font-size:17.5px;
+      margin-bottom:10px;
     }
 `;
 

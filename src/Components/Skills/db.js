@@ -90,7 +90,8 @@ export const project =[
     {
         id:1,
         title:"CollabIn",
-        link:"https://my-excel-ac4i.vercel.app",
+        Livelink:"https://my-excel-ac4i.vercel.app",
+        gitLink:"",
         aboutTitle:"clone your idea",
         img:"images/collab.png",
         discription:"This is about us",
@@ -104,7 +105,8 @@ export const project =[
     },
     {
         id:2,
-        link:"",
+        Livelink:"https://reel-app.vercel.app/",
+        gitLink:"https://github.com/Chirag200218/Reel-App",
         title:"Reel App",
         aboutTitle:"clone your idea",
         img:"images/instagramImg.jpg",
@@ -120,7 +122,8 @@ export const project =[
     {
         id:3,
         title:"Excel App",
-        link:"https://my-excel-ac4i.vercel.app",
+        Livelink:"https://my-excel-ac4i.vercel.app",
+        gitLink:"https://github.com/Chirag200218/MY_EXCEL",
         aboutTitle:"clone your idea",
         img:"images/excel.svg",
         discription:"This is about us",
@@ -135,7 +138,8 @@ export const project =[
     {
         id:4,
         title:"Linked App",
-        link:"https://your-linkedin-clone.netlify.app",
+        Livelink:"https://your-linkedin-clone.netlify.app",
+        gitLink:"",
         aboutTitle:"clone your idea",
         img:"images/linkedLogo.png",
         discription:"This is about us",
@@ -150,7 +154,8 @@ export const project =[
     {
         id:5,
         title:"Movie Website",
-        link:"https://movie-react-app-chirag.netlify.app",
+        Livelink:"https://movie-react-app-chirag.netlify.app",
+        gitLink:"",
         img:"images/Movie.jpeg",
         discription:"This is about you",
         youtube:"link",
@@ -165,6 +170,8 @@ export const project =[
         id:6,
         title:"Todo Website",
         img:"images/Todo.jpg",
+        Livelink:"",
+        gitLink:"https://github.com/Chirag200218/JeeraTicketManagement",
         discription:"This is about you",
         youtube:"link",
         Tech:["html","css","js","react","redux"],

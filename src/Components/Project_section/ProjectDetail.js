@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import {useLocation,  useNavigate } from "react-router-dom";
 import {motion} from "framer-motion";
+import { Link } from 'react-router-dom';
 
 function ProjectDetail() {
 
@@ -28,7 +29,6 @@ function ProjectDetail() {
             </Topic>
          )
     })
-
   return (
     <Container>
         <Header>
@@ -37,8 +37,8 @@ function ProjectDetail() {
         </Header>
         <Laptop><iframe></iframe></Laptop>
         <Links>
-            <motion.button whileTap={{scale:"0.8"}}>Live Website</motion.button>
-            <motion.button whileTap={{scale:"0.8"}}>Source Code</motion.button>
+            <motion.button whileTap={{scale:"0.8"}}><a href={location.state.Livelink} target={'_blank'}>Live Website</a></motion.button>
+            <motion.button whileTap={{scale:"0.8"}} ><a href={location.state.gitLink} target={'_blank'}>Source Code</a></motion.button>
         </Links>
         <Tech>
             <div>Tech Used</div>

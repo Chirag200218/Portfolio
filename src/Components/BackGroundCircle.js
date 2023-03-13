@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect';
 function BackGroundCircle(props) {
   return (
     <Container> 
-        <Circle3 as={motion.div} viewport={{once:true}} initial={{scale:0,opacity:0}} whileInView={{opacity:1,scale:[3,1,2,1,1.5,1]}} transition={{duration:3,ease:"linear"}}>
+        <Circle3 as={motion.div} viewport={{once:true}} initial={{scale:0,opacity:0}} whileInView={{opacity:1,scale:[3,1,2,1,1.5,1]}} transition={{duration:2,ease:"easeIn",type: "spring", stiffness: 10 }}>
             <Circle2 as={motion.div} initial={{opacity:0}} animate={{ opacity:[1,0.2,0.6,0.2,1]}} transition={{duration:6,repeat:Infinity,repeatType: "reverse"}}>
                 <Circle1 as={motion.div} initial={{opacity:0}} animate={{ opacity:[1,0.4,0.6,0.4,1]}} transition={{duration:4,repeat:Infinity,repeatType: "reverse"}}>
                      
@@ -381,15 +381,13 @@ const Social = styled.div`
 const Circle3 = styled.div`
     position:absolute;
     border-radius: 50%;
-    border: 0.8px solid #cc1942;
+    border: 0.6px solid #4e0c1b;
     width: 580px;
     height: 580px;
     background:transparent;
     display : flex;
     align-items:center;
     justify-content: center;
-
-    box-shadow:0.2px 0.2px 4px #cc1942;
 `;
 
 const Circle2 = styled.div` 
