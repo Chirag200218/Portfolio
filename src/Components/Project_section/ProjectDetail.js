@@ -199,9 +199,10 @@ const Tech = styled.div`
         justify-content:space-evenly;
         align-items:center;
         flex-wrap: wrap;
-        font-family: 'Titillium Web', sans-serif;
+        font-family: system-ui;
         h6{
-            font-size:2rem;
+            text-transform:uppercase;
+            font-size:24px;
             flex-shrink:0;
             height: 18%;
             text-align: center;
@@ -264,6 +265,7 @@ const TitleName = styled.div`
 const Info = styled.div`
     height: 80%;
     font-size:2rem;
+    padding:0% 1%; 
     // text-align:center;
     color:white;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;

@@ -25,7 +25,7 @@ function BackGroundCircle(props) {
             <span>
                 <Typewriter
                         options={{
-                            strings: ['Frontend Developer 💫', 'Competetive Programmer 🌟','Educator Associate'],
+                            strings: ['Frontend Developer 💫', 'Comptetive Programmer 🌟','Educator Associate'],
                             autoStart: true,
                             loop: true,
                             cursor:"<>",
@@ -33,7 +33,12 @@ function BackGroundCircle(props) {
                />
             </span>
             </About>
-
+            {/* <div style={{position:"absolute",bottom:"2%",display:"flex",justifyContent:"space-around",alignItems:"center",height:"50px",width:"70%",border:"1px solid red"}}>
+                <img src={'/images/mail_white.png'} style={{height:"50px",width:"40px",borderRadius:"0%"}}></img>
+                <img src={'/images/linkedin_white.png'} style={{height:"40px",width:"40px",borderRadius:"0%"}}></img>
+                <img src={'/images/leetcode_white.png'} style={{height:"40px",width:"40px",borderRadius:"0%"}}></img>
+                <img src={'/images/git_white.png'} style={{height:"40px",width:"40px",borderRadius:"0%"}}></img>
+            </div> */}
         </Wrapper>
         
         
@@ -62,31 +67,26 @@ function BackGroundCircle(props) {
             animation: animated-gradient 5s ease-in-out infinite;
             font-family: 'Mitr', sans-serif;
         }
- 
-        @keyframes animated-gradient {
-            0%,
-            100% {
+        
+        @keyframes animated-gradient{
+            0%,100%{
                 background-position: 0 50%;
             }
-
-            50% {
+            50%{
                 background-position: 100% 50%;
             }
         }
-
         .container {
             width:fit-content;
             margin:0px auto;
             text-align:center;
-          }
-          
+          } 
           .glitch, .glow {
             color: #dfbfbf;
             position: relative;
             font-size: 2.5rem;
             animation: glitch 5s 5s infinite;
           }
-          
           .glitch::before, .glow::before {
             content: attr(data-text);
             position: absolute;
@@ -97,7 +97,6 @@ function BackGroundCircle(props) {
             top: 0;
             animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
           }
-          
           .glitch::after, .glow::after {
             content: attr(data-text);
             position: absolute;
@@ -108,7 +107,6 @@ function BackGroundCircle(props) {
             top: 0;
             animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
           }
-          
           @keyframes glitch {
             1% {
               transform: rotateX(10deg) skewX(90deg);

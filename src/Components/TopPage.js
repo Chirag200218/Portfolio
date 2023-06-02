@@ -58,8 +58,6 @@ function TopPage() {
                                 autoStart: true,
                                 loop: true,
                             }}
-                           
-
                         />
                     </span>
             </Content>

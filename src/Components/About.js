@@ -210,7 +210,9 @@ function About() {
             <Base>
               <ResumeBox>
                 <span>Can I help you? lets work</span>
-                <button>Resume</button>
+                <a href="/pdf/Chirag_Jain_resume.pdf" download="ChiragJain_Resume" target='_blank'>
+                  <motion.button whileTap={{scale:0.8}} type="button">Download Resume</motion.button>
+                </a>
               </ResumeBox>
               <TitleBox style={{boxShadow:type!=="About"?"rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px":"rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"}} as={motion.div} whileTap={{ scale: 0.9 }} onClick={()=>setType("About")} >
                 <img src={'images/aboutme.png'}></img>
@@ -637,6 +639,7 @@ z-index:3;
 const App = styled.div`
     display:none;
     position:absolute;
+    cursor:pointer;
     z-index:1;
     flex-direction:column;
     justify-content:center;
@@ -651,7 +654,6 @@ const App = styled.div`
 const Content = styled.div`
     height:220px;
     width:220px;
-    // border:1px solid red;
     border-radius:15px;
     display:flex;
     flex-direction:column;
