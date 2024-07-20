@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import {motion,AnimatePresence} from "framer-motion"
 import { useState } from 'react';
+import '../index.css'
 
 function About() {
   const [type,setType] = useState("About");
@@ -9,7 +10,6 @@ function About() {
   const view=  (e,id)=>{
     let outer = document.getElementById("scrollable");
     let elem = document.getElementById(id);
-    console.log(elem);
     // outer.scrollTop = Position(elem+100);
     // // e.target.scrollIntoView();
     // outer.scrollTo(0,Position(elem)-100);
@@ -29,7 +29,7 @@ function About() {
   return (
     <Container id="AboutSection">
         <Laptop>
-         <Header  as={motion.div} viewport={{ once: true }}  initial={{y:200,opacity:0}} whileInView={{y:0,opacity:1}}  transition={{duration:1}}>About</Header>
+         <Header className='header-responsive-style' as={motion.div} viewport={{ once: true }}  initial={{y:200,opacity:0}} whileInView={{y:0,opacity:1}}  transition={{duration:1}}>About</Header>
          <Circle></Circle>
          <Circle1></Circle1>
         <DecisionBox>
@@ -41,10 +41,10 @@ function About() {
             
             {
               type==="About" && 
-              (<AboutBox>
-                <p>I am persuing B.tech in Computer Science from SKIT,Jaipur. Has worked previously with ed-tech company Geekster as a teaching associate and SDE intern, where I worked on frontend technologies gaining hands-on experience with software development methodologies and tools.</p>
+              (<AboutBox className='text-responsive-style'>
+                <p>As a full stack developer and educator associate, I bring a wealth of technical knowledge and practical skills to any software development role. I have experience in using tools such as React.js, Next.js, TypeScript, Express.js, PostgreSQL and Java DSA, and I have a proven track record of delivering high-quality code.</p>
                 <p>My passion for software development fuels my desire to continuously learn and grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing system, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
-                   My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1800+ rating in leetcode contests and 4🌟 on codechef.</p>
+                   My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1950+ rating in leetcode contests and 4🌟 on codechef.</p>
                 <p>Throughout my academic journey, I have consistently achieved excellent grades, demonstrating my dedication and commitment to learning. have participated in various hackathons and coding competitions, where I have collaborated with other developers and put my skills to the test in real-world scenarios. In my free time, I enjoy building small-scale projects, teaching my fellow-mates, juniors and play table tennis.</p>
               </AboutBox>)
             }
@@ -56,9 +56,9 @@ function About() {
                 <img src={'/images/geek.png'} alt="chirag"></img>
                   <h3>Teaching Associate</h3>
                   <h5>Geekster</h5>
-                  <span>Nov,2022-Dec,2022</span>
+                  <span>Nov,2022 - Dec,2022</span>
                   <App style={{justifyContent:"space-around"}}> 
-                    <p style={{fontSize:"13px"}}>🌟took regular live and remedial classes for 70+ students in java/DSA.</p>
+                    <p style={{fontSize:"13px"}}>🌟Took regular live and remedial classes for 70+ students in java/DSA.</p>
                     <p style={{fontSize:"13px"}}>🌟Helped 250+ students by debugging their codes and solved their doubts.</p>
                     <p style={{fontSize:"13px"}}>🌟Created 300+ problems based on Java/DSA.</p>
                   </App>
@@ -67,11 +67,21 @@ function About() {
                   <img src={'/images/geek.png'} alt="chirag"></img>
                   <h3>SDE INTERN</h3>
                   <h5>Geekster</h5>
-                  <span>july,2022-oct,2022</span>
+                  <span>July,2022 - Oct,2022</span>
                   <App style={{justifyContent:"space-around"}}> 
-                    <p style={{fontSize:"13px"}}>🌟revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</p>
+                    <p style={{fontSize:"13px"}}>🌟Revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</p>
                     <p style={{fontSize:"13px"}}>🌟Fixed bugs and optimized website perfomance and speed.</p>
-                    <p style={{fontSize:"13px"}}>🌟implement productive design to make data more highlighted and clear to audience.</p>
+                    <p style={{fontSize:"13px"}}>🌟Implement productive design to make data more highlighted and clear to audience.</p>
+                  </App>
+                </Content>
+                <Content>
+                  <img src={'/images/AppPerfect.png'} alt="chirag"></img>
+                  <h3>Full Stack Developer</h3>
+                  <h5>AppPerfect Corp</h5>
+                  <span>Sept,2023 - Present</span>
+                  <App style={{justifyContent:"space-around"}}> 
+                    <p style={{fontSize:"13px"}}>🌟Developed and maintained user-friendly interfaces with React, enhancing frontend performance and ensuring seamless user experience.</p>
+                    <p style={{fontSize:"13px"}}>🌟Engineered and integrated scalable APIs, streamlining data access and enhancing system performance across application components.</p>
                   </App>
                 </Content>
               </BackImage>
@@ -108,7 +118,7 @@ function About() {
                   <p style={{fontSize:"18px"}}>B.tech CSE</p>
                   <p style={{fontSize:"12px"}}>2020-2024</p>
                   <p style={{fontSize:"18px"}}>CGPA: 9.5</p>
-                  <p style={{fontSize:"18px"}}>Won multiple university TT champioship and taught 300+ juniors coding through college clubs</p>
+                  <p style={{fontSize:"0.9vw"}}>Won multiple university TT champioship and taught 300+ juniors coding through college clubs</p>
                 </App>
               </Content>
 
@@ -121,7 +131,7 @@ function About() {
              
             <AnimatePresence>
               {type==="About" && (
-                <Work style={{width:"350px"}}as={motion.div}  initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}}>
+                <Work className='text-responsive-style' style={{width:"350px"}}as={motion.div}  initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}}>
                  <p style={{color:"rgba(243, 229, 177, 0.99)"}}>I am persuing B.tech in Computer Science from SKIT, Jaipur. Has worked previously with Geekster as a teaching associate and SDE intern, where I worked on frontend technologies gaining hands-on experience with software development methodologies and tools.</p>
                 <p style={{color:"rgba(243, 229, 177, 0.80)"}}>My passion for software development fuels my desire to continuously grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
                    My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1800+ rating in leetcode contests and 4🌟 on codechef.</p>
@@ -171,38 +181,53 @@ function About() {
             <AnimatePresence>
                 {type==="Experience" && (
                   <Work id="scrollable" as={motion.div} viewport={{once:true}} initial={{x:300}} whileInView={{x:0}} exit={{x:-400}} transition={{duration:0.3}} style={{overflow:"scroll",cursor:"pointer",padding:"10px"}}> 
-                  <Openbox onClick={(e)=>{work==="two"?setWork(""):setWork("two");view(e,"two")}} id="two">
+                    <Openbox onClick={(e)=>{work==="three"?setWork(""):setWork("three"); view(e,"three")}} id="three">
                         <div style={{height:"90px",position:"relative",padding:"10px"}}>
-                          <h3 style={{width:"70%",wordBreak:"break-word"}}>SDE Intern</h3>
-                          <span>Oct,2022-Dec,2022</span>
-                          <img style={{position:"absolute",height:"80%",top:"10px",right:"10px"}} src={"/images/geek.png"}></img>
+                          <h3 style={{width:"70%",wordBreak:"break-word"}}>Full Stack Developer</h3>
+                          <span>Sept,2023 - Present</span>
+                          <img style={{position:"absolute",height:"50%",top:"20px",right:"20px"}} src={"/images/AppPerfect.png"}></img>
                         </div>
-                        {work==="two" && (
-                          <Expand >
-                             <ul>
-                                <li>revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</li>
-                                <li> Fixed bugs and optimized website perfomance and speed.</li>
-                                <li>implement productive design to make data more highlighted and clear to audience.</li>
-                              </ul>
-                          </Expand>
-                        )}
-                     </Openbox>
-                     <Openbox onClick={(e)=>{work==="one"?setWork(""):setWork("one"); view(e,"one")}} id="one">
-                        <div style={{height:"90px",position:"relative",padding:"10px"}}>
-                          <h3 style={{width:"70%",wordBreak:"break-word"}}>Teaching Associate</h3>
-                          <span>July,2022- Nov,2022</span>
-                          <img style={{position:"absolute",height:"80%",top:"10px",right:"10px"}} src={"/images/geek.png"}></img>
-                        </div>
-                        {work==="one" && (
+                        {work==="three" && (
                           <Expand> 
                               <ul>
-                                <li>took regular live and remedial classes for 70+ students in java/DSA.</li>
-                                <li>Helped 250+ students by debugging their codes and solved their doubts.</li>
-                                <li>Created 300+ problems based on Java/DSA.</li>
+                                <li>Developed and maintained user-friendly interfaces with React, enhancing frontend performance and ensuring seamless user experience.</li>
+                                <li>Engineered and integrated scalable APIs, streamlining data access and enhancing system performance across application components.</li>
                               </ul>
                           </Expand>
                         )}
-                     </Openbox>
+                  </Openbox>
+                    <Openbox onClick={(e)=>{work==="two"?setWork(""):setWork("two");view(e,"two")}} id="two">
+                          <div style={{height:"90px",position:"relative",padding:"10px"}}>
+                            <h3 style={{width:"70%",wordBreak:"break-word"}}>SDE Intern</h3>
+                            <span>Oct,2022-Dec,2022</span>
+                            <img style={{position:"absolute",height:"80%",top:"10px",right:"10px"}} src={"/images/geek.png"}></img>
+                          </div>
+                          {work==="two" && (
+                            <Expand >
+                              <ul>
+                                  <li>revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</li>
+                                  <li> Fixed bugs and optimized website perfomance and speed.</li>
+                                  <li>implement productive design to make data more highlighted and clear to audience.</li>
+                                </ul>
+                            </Expand>
+                          )}
+                    </Openbox>
+                    <Openbox onClick={(e)=>{work==="one"?setWork(""):setWork("one"); view(e,"one")}} id="one">
+                          <div style={{height:"90px",position:"relative",padding:"10px"}}>
+                            <h3 style={{width:"70%",wordBreak:"break-word"}}>Teaching Associate</h3>
+                            <span>July,2022- Nov,2022</span>
+                            <img style={{position:"absolute",height:"80%",top:"10px",right:"10px"}} src={"/images/geek.png"}></img>
+                          </div>
+                          {work==="one" && (
+                            <Expand> 
+                                <ul>
+                                  <li>took regular live and remedial classes for 70+ students in java/DSA.</li>
+                                  <li>Helped 250+ students by debugging their codes and solved their doubts.</li>
+                                  <li>Created 300+ problems based on Java/DSA.</li>
+                                </ul>
+                            </Expand>
+                          )}
+                    </Openbox>
                      
                   </Work>
                 )}
@@ -210,7 +235,7 @@ function About() {
             <Base>
               <ResumeBox>
                 <span>Can I help you? lets work</span>
-                <a href="/pdf/Chirag_Jain_resume.pdf" download="ChiragJain_Resume" target='_blank'>
+                <a href="https://drive.google.com/file/d/1YPwAlfkdX57Q7jlq-fjHgmoHOvDYFXd2/view?usp=drivesdk" download="ChiragJain_Resume" target='_blank'>
                   <motion.button whileTap={{scale:0.8}} type="button">Download Resume</motion.button>
                 </a>
               </ResumeBox>
@@ -292,7 +317,6 @@ const Work = styled.div`
   // border:1px solid red;
    
   p{
-    font-size:14.5px;
     margin-bottom:4px;
   }
   
@@ -578,7 +602,13 @@ const Decision = styled.div`
   font-weight: bold;
   cursor:pointer;
   border-radius:10px 10px 0px 0px;
+  @media only screen and (max-width: 1100px) {
+    width: 160px;
+  }
 
+  @media only screen and (max-width: 430px) {
+      display:none;
+  }
 `;
 const ContentBox = styled.div`
   height:60%;
@@ -590,8 +620,10 @@ const ContentBox = styled.div`
   display:flex;
   align-items:center;
   backdrop-filter: blur(22.8007px);
-  // z-index:1;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  @media only screen and (max-width: 1100px) {
+    width:90%;    
+  }
 `;
 const BackImage= styled.div`
     height:100%;
@@ -665,6 +697,7 @@ const Content = styled.div`
     transition: 1s;
     h3{
       margin:10px 0px;
+      text-align:center;
     }
     h5{
       margin-bottom:10px;
@@ -692,7 +725,6 @@ const AboutBox= styled.div`
     padding-top:40px;
     p{
       color:#fec868;
-      font-size:17.5px;
       margin-bottom:10px;
     }
 `;

@@ -136,7 +136,7 @@ const Container = styled.div`
         flex-direction:column;
        
     }
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
         height:87%;
         // border: 1px solid red;
         justify-content:space-around;
@@ -157,10 +157,10 @@ const Left = styled.div`
         height: 20%;
         flex-direction: row;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
         height:20%;
         // border: 1px solid red;
-   }
+    }
 `;
 const Center = styled.div`
     height:90%;
@@ -178,7 +178,7 @@ const Center = styled.div`
         width:100vw;
         height: 60%;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
         height: 80%;
         justify-content: space-around;
    }
@@ -195,7 +195,7 @@ const Right = styled.div`
         height: 20%;
         flex-direction: row;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
         display:none;
     }
     
@@ -212,7 +212,7 @@ const Line = styled.div`
         // width:20%;   
         // flex-direction:column;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
         display:none;
    }
 `;
@@ -220,7 +220,7 @@ const Line = styled.div`
 
 const Store = styled.div`
     display:none;
-    @media (max-width: 550px) {
+    @media (max-width: 650px) {
         display:flex;
         justify-content: space-around;
         align-items:center;

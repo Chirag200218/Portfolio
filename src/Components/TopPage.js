@@ -45,7 +45,9 @@ function TopPage() {
                     initial={{opacity:0,scale:1.4}} animate={{opacity:1,scale:1}}
                     transition= {{ duration:3}} 
                 >
-                Hello World !!</motion.h1>
+                <p>Hello</p>
+                <p>World !!</p>
+                </motion.h1>
             </BackGround>
             <Content className="animate__animated animate__lightSpeedInLeft animate__delay-2s">
                     <div >Hi I'm</div>
@@ -54,7 +56,7 @@ function TopPage() {
                         <Typewriter
                             style={{width:"600px"}}
                             options={{
-                                strings: [' Frontend Developer 💫', ' Competetive Programmer 🌟',' Educator Associate🥸'],
+                                strings: [' Full Stack Developer 💫', ' Competetive Programmer 🌟',' Educator Associate🥸'],
                                 autoStart: true,
                                 loop: true,
                             }}
@@ -144,6 +146,8 @@ const Container = styled.div`
 `;
 const BackGround =  styled.div`
     position: absolute;
+    display:flex;
+    align-items:center;
     top: 0%;
     left: 2%;
     height: 100vh;
@@ -161,16 +165,9 @@ const BackGround =  styled.div`
     }
     @media only screen and (max-width: 1025px) {
         h1 {
-            font-size: 28rem;
-        }
-      }
-
-    @media only screen and (max-width: 769px) {
-        h1 {
             font-size: 24rem;
         }
       }
-
 `;
 
 

@@ -62,7 +62,7 @@ const Container = styled.div`
 `;
 const Title = styled.div`
     display:none;
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 650px) {
         position:absolute;
         text-align:center;
         height:10%;
@@ -102,7 +102,7 @@ const Header = styled(motion.div)`
         height: 21rem;
     }
 
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 650px) {
         display:none;
     }
 `;
@@ -124,7 +124,7 @@ const Section = styled.div`
         background: transparent;
     }
 
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 650px) {
         flex-direction: column;
         overflow-y: scroll;
         width: 90%;
@@ -167,7 +167,7 @@ const Img= styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 650px) {
         background-size: contain;
     }
 `;
@@ -232,7 +232,7 @@ const Work = styled.div`
         width:28%;
     }
 
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 650px) {
         height: 40%;
         width: 70%;
         top:    0px;

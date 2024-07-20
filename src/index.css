@@ -41,3 +41,94 @@ span {
 	/* vertical-align: baseline; */
 	background: transparent;
 }
+
+.header-responsive-style{
+  font-size:0px;
+}
+
+.secondary-header-responsive-style{
+
+}
+
+.text-responsive-style{
+  font-size: 14.5px
+}
+
+
+@media only screen and (min-width:650px) {
+  .header-responsive-style{
+ 
+  }
+  
+  .secondary-header-responsive-style{
+  
+  }
+  
+  .text-responsive-style{
+    font-size: clamp(14px,1.5vw,16px);
+  }
+  
+}
+
+@media only screen and (min-width:992px) {
+  .header-responsive-style{
+ 
+  }
+  
+  .secondary-header-responsive-style{
+  
+  }
+  
+  .text-responsive-style{
+    font-size: clamp(16px,1.4vw,20px);
+  }
+  
+}
+
+@media only screen and (min-width:1400px) {
+  .header-responsive-style{
+ 
+  }
+  
+  .secondary-header-responsive-style{
+  
+  }
+  
+  .text-responsive-style{
+    font-size: clamp(20px,1.1vw,24px);
+  }
+  
+}
+
+@media only screen and (min-width:2500px) {
+  .header-responsive-style{
+ 
+  }
+  
+  .secondary-header-responsive-style{
+  
+  }
+  
+  .text-responsive-style{
+    font-size: clamp(24px,1.2vw,28px);
+  }
+  
+}
+
+@media only screen and (min-width:3500px) {
+  .header-responsive-style{
+    font-size: 5vw;
+  }
+  
+  .secondary-header-responsive-style{
+  
+  }
+  
+  .text-responsive-style{
+    font-size: min(40px,1.4vw);
+  }
+  
+}
+
+
+
