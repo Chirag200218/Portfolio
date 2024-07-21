@@ -96,7 +96,7 @@ function About() {
                   <App style={{textAlign:"center"}}>
                     <p style={{fontSize:"18px"}}>10th class</p>
                     <p style={{fontSize:"12px"}}>2017-18</p>
-                    <p style={{fontSize:"18px"}}>Got Best Student Award,state level in Kho-kho,table tennis</p>
+                    <p style={{fontSize:"0.9vw"}}>Got Best Student Award,state level in Kho-kho,table tennis</p>
                   </App>
               </Content>
               <Content>
@@ -106,7 +106,7 @@ function About() {
                   <App style={{textAlign:"center"}}>
                     <p style={{fontSize:"18px"}}>12th class</p>
                     <p style={{fontSize:"12px"}}>2019-20</p>
-                    <p style={{fontSize:"18px"}}>Percentage: 95%</p>
+                    <p style={{fontSize:"0.9vw"}}>Percentage: 95%</p>
                   </App>
               </Content>
               <Content>
@@ -132,7 +132,7 @@ function About() {
             <AnimatePresence>
               {type==="About" && (
                 <Work className='text-responsive-style' style={{width:"350px"}}as={motion.div}  initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}}>
-                 <p style={{color:"rgba(243, 229, 177, 0.99)"}}>I am persuing B.tech in Computer Science from SKIT, Jaipur. Has worked previously with Geekster as a teaching associate and SDE intern, where I worked on frontend technologies gaining hands-on experience with software development methodologies and tools.</p>
+                 <p style={{color:"rgba(243, 229, 177, 0.99)"}}>As a full stack developer and educator associate, I bring a wealth of technical knowledge and practical skills to any software development role. I have experience in using tools such as React.js, Next.js, TypeScript, Express.js, PostgreSQL and Java DSA, and I have a proven track record of delivering high-quality code.</p>
                 <p style={{color:"rgba(243, 229, 177, 0.80)"}}>My passion for software development fuels my desire to continuously grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
                    My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1800+ rating in leetcode contests and 4🌟 on codechef.</p>
                 <p style={{color:"rgba(243, 229, 177, 0.99)"}}>Throughout my academics, I have consistently achieved excellent grades. have participated in various hackathons and coding competitions, where I have collaborated with other developers and put my skills to the test in real-world scenarios. In my free time, I enjoy building small-scale projects, teaching my fellow-mates, juniors and play table tennis.</p>

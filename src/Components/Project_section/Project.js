@@ -192,10 +192,14 @@ const Id = styled.div`
     line-height: .25;
     font-style: italic;
     font-weight: 700;
-    -webkit-text-stroke-width: 0.05vw;
+    -webkit-text-stroke-width: 0.10vw;
     -webkit-text-stroke-color: #e2b8aa;
     z-index:3;
     top:0px;
+    @media only screen and (max-width: 650px) {
+        color:white;
+        -webkit-text-stroke-width: 0.50vw;
+    }
 `;
 
 const Work = styled.div`

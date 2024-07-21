@@ -25,7 +25,7 @@ function BackGroundCircle(props) {
             <span>
                 <Typewriter
                         options={{
-                            strings: ['Frontend Developer 💫', 'Comptetive Programmer 🌟','Educator Associate'],
+                            strings: ['Full Stack Developer 💫', 'Comptetive Programmer 🌟','Educator Associate'],
                             autoStart: true,
                             loop: true,
                             cursor:"<>",

@@ -104,7 +104,7 @@ const Laptop = styled.div`
     background-size: contain;
     background-position: center;
     background-repeat: space;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 650px) {
         height: 225px;
         width: 330px;
     }
@@ -129,7 +129,7 @@ const Laptop = styled.div`
             width: 77%;        
         }
 
-        @media only screen and (max-width: 600px) {       
+        @media only screen and (max-width: 650px) {       
             top: 17px;
             left: 37px;
             height: 170px;
@@ -184,7 +184,7 @@ const Tech = styled.div`
         font-size: 5rem;
         height: 28%;
         margin-top:1%;
-        @media only screen and (max-width: 430px) {
+        @media only screen and (max-width: 650px) {
             font-size: 3rem;
             margin-top:6%;
         }
@@ -221,7 +221,7 @@ const Features = styled.div`
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
     align-items:center;
     overflow:hidden;
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 650px) {
         font-size:13px;
     }
     h1{
@@ -230,7 +230,7 @@ const Features = styled.div`
         height: 28%;
         margin-top:1%;
         font-family:emoji;
-        @media only screen and (max-width: 430px) {
+        @media only screen and (max-width: 650px) {
             font-size: 3rem;
             margin-top:6%;
         }
@@ -239,7 +239,7 @@ const Features = styled.div`
 
 const Topic = styled.div`
     position:relative;
-    height:30vh;
+    height:fit-content;
     width:96%;
     margin:1%;
     padding:3px;
@@ -255,7 +255,7 @@ const TitleName = styled.div`
     height: 20%;
     padding:0% 1%; 
     margin-bottom:8px;
-    @media only screen and (max-width: 430px) {
+    @media only screen and (max-width: 650px) {
         font-size: 2rem;
         padding:0% 2%;
         margin-bottom:0px;
@@ -301,7 +301,7 @@ margin-top:3%;
         width: 55vw;
         font-size: 2.8rem;
    }
-   @media (max-width: 430px) {
+   @media (max-width: 650px) {
     width:50vw;
     font-size:1.8rem;
     }
