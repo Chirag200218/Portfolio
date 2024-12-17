@@ -3,30 +3,33 @@ import styled from 'styled-components'
 import {data} from "./db"
 import { useEffect } from 'react';
 import {motion} from "framer-motion"
+import useMobileView from '../../Hooks/useMobileView';
  
 
 function Box({id,handleClick}) {
-    useEffect(()=>{
-        callTimer();
-    },[]);
+    const {isMobileView} = useMobileView();
 
-    function callTimer(){
+    useEffect(()=>{
         const btn = document.getElementsByClassName("right");
         const btnMob = document.getElementsByClassName("rightMob");
-        setInterval(()=>{
-            if(document.documentElement.clientWidth<="450"){
+        let intervalId = setInterval(()=>{
+            if(isMobileView){
                 btnMob[0].click();
                 return;
             }else{
                 btn[0].click();
             }
-        },15000);
-    }
+        },12000);
+
+        return ()=> clearInterval(intervalId);
+
+    },[]);
+
   return (
     <>
         <Container as={motion.div} viewport={{once:true}}  initial={{scale:0.5}} whileInView={{scale:1}} transition={{duration:1.5}}>
             <LeftArrow as={motion.div} viewport={{once:true}}  initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:4}}>
-                <img onClick={(e)=>{handleClick(e,id===0?11:id-1)}} src='images/leftArrow.png' alt="oekjo"></img>
+                <img onClick={(e)=>{handleClick(e,id===0?11:id-1)}} src='images/leftArrow.png' alt="leftArrow"></img>
             </LeftArrow>
             <Content>
                 <LeftSection>
@@ -42,17 +45,17 @@ function Box({id,handleClick}) {
                             <img src='/images/badge.png'></img>
                             <a href="/portofolio.com">Certification</a>
                         </Youtube>
-                        <Testimonial>
+                        <Testimonial className='text-responsive-style' >
                             {data[id].testimonial}
                         </Testimonial>
                 </RightSection>
             </Content>
             <RightArrow as={motion.div} viewport={{once:true}}  initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:4}}>
-                <img className = "right" onClick={(e)=>{handleClick(e,id===11?0:id+1)}} src='/images/rightArrow.png' alt='jfejfp'></img>
+                <img className = "right" onClick={(e)=>{handleClick(e,id===11?0:id+1)}} src='/images/rightArrow.png' alt='rightArrow'></img>
             </RightArrow>
             <Guide>
-                <img onClick={(e)=>{handleClick(e,id===0?11:id-1)}} src='images/leftArrow.png' alt="oekjo"></img>
-                <img className= "rightMob" onClick={(e)=>{handleClick(e,id===11?0:id+1)}} src='images/rightArrow.png' alt='jfp'></img>
+                <img onClick={(e)=>{handleClick(e,id===0?11:id-1)}} src='images/leftArrow.png' alt="leftArrow"></img>
+                <img className= "rightMob" onClick={(e)=>{handleClick(e,id===11?0:id+1)}} src='images/rightArrow.png' alt='rightArrow'></img>
             </Guide>
         </Container>
     </>
@@ -62,12 +65,17 @@ function Box({id,handleClick}) {
 }
 
 const Container = styled.div`
-    height: 35rem;
+    min-height: 35rem;
+    height:fit-content;
     width: 100%;
     // border: 1px solid blue;
     display: flex;
     align-items:center;
-    @media (max-width: 550px) {
+    
+    @media (max-width: 825px) {
+     gap:15px;
+    }
+    @media (max-width: 600px) {
         height: 100%;
         justify-content: space-evenly;
         align-items:center;
@@ -84,12 +92,13 @@ const Content = styled.div`
     display:flex;
     align-items:center;
     @media (max-width: 769px) {
-        height:80%;
+        height:fit-content;
     }
-    @media (max-width: 550px) {
-       height:32rem;
+    @media (max-width: 650px) {
+       height:fit-content;
        width: 90%;
        flex-direction:column;
+       padding-bottom:10px;
    }
 `;
 
@@ -104,7 +113,7 @@ const LeftArrow = styled.div`
         width: 6.5rem;
         filter: contrast(0.5);
     }
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         display:none;
    }
    &:hover {
@@ -123,7 +132,7 @@ const RightArrow = styled.div`
         width: 6.5rem;
         filter: contrast(0.5);
     }
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         display:none;
    }   
    &:hover {
@@ -133,7 +142,7 @@ const RightArrow = styled.div`
 
 const Guide = styled.div`
    display:none;
-   @media (max-width: 550px) {
+   @media (max-width: 600px) {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -159,7 +168,7 @@ const LeftSection = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content: center;
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
          width:90%;
          height: 18%;
          border-right: none;
@@ -175,7 +184,7 @@ const RightSection = styled.div`
     display:flex;
     flex-direction: column;
     align-items:center;
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         width:100%;
         height: 82%;
   }
@@ -193,7 +202,7 @@ const Photo = styled.div`
         height: 100%;
         width:100%;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         display:none;
    }
 `;
@@ -206,25 +215,33 @@ const Name = styled.div`
     align-items: center;
     justify-content: center;
     font-size:large;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
+    @media (max-width: 1720px) {
+        font-size:3rem;     
+    }
+    @media (max-width: 1320px) {
+        font-size:2.5rem;     
+    }
+    @media (max-width: 1120px) {
+        font-size:2rem;     
+    }
     
-    @media (max-width: 550px) {
-        font-size:x-large;
-        font-weight: 500;
-   }
+    @media (max-width: 820px) {
+        font-size:3rem;     
+    }
 `;
 
 
 const Youtube = styled.div`
-    height:10%;
+    height:30px;
     width:90%;
     display: flex;
     justify-content: flex-end;
     text-align: right;
     font-weight: 700;
     color: gray;
-    margin-top: 20px;
+    margin-top: 10px;
     align-items:center;
     img{
         height: 100%;
@@ -248,14 +265,12 @@ const Testimonial = styled.div`
     margin-top:10%;
     overflow-wrap: break-word;
     font-family: open sans,sans-serif;
-    font-size: 1.5rem;
     width:90%;
     margin: 7% 0px;
     font-weight: 400;
     color: black;
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
          margin:10px 0px;
-         font-size:1.4rem;
    }
 
 `;

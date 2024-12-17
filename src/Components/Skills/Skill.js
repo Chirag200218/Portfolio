@@ -16,10 +16,13 @@ const Container = styled.div`
     height:100vh;
     width:100%;
     scroll-snap-align: start;
-    @media (max-width: 768px) {
-        height: 100vh;
+    @media (max-width: 825px) {
+      height: 100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-evenly;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         width:100%;
         height: 100vh;
     }

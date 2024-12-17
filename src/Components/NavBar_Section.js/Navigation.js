@@ -12,7 +12,7 @@ const variants = {
 };
 
 const Navigation = ({setCurr}) => (
-  <motion.ul variants={variants}>
+  <motion.ul variants={variants} className="ul-box">
     {itemIds.map(i => (
       <MenuItem i={i} name={itemName[i]} key={i} setCurr={setCurr}/>
     ))}

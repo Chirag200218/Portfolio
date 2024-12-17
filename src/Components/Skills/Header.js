@@ -13,10 +13,10 @@ function Header() {
 }
 
 const Head = styled.div`
-    height: 20%;
+    height: fit-content;
     width:100vw;
     display:flex;
-    justify-content: space-around;
+    padding:30px 20px;
     flex-direction:column;
     h1{
         color:white;
@@ -29,7 +29,7 @@ const Head = styled.div`
         font-weight:700;
         text-shadow: 0.02em 0.02em 0.01em rgb(0 0 0 / 25%), 0 0 0 #8e8e8e;
         -webkit-text-stroke: 0.5px #343434;
-        @media only screen and (max-width: 430px) {
+        @media only screen and (max-width: 600px) {
             height:100%;
             display: flex;
             font-style: unset;
@@ -44,11 +44,11 @@ const Head = styled.div`
             color:#328e32;
         }
         text-align:center;
-        @media only screen and (max-width: 550px) {
+        @media only screen and (max-width: 600px) {
             display:none;
         }
     }
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 600x) {
            height:13%; 
     }
 `;

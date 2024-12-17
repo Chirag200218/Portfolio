@@ -36,12 +36,12 @@ export const MenuItem = ({ i , name, setCurr}) => {
     setTimeout(()=>{
       elem.scrollIntoView({behavior:"smooth"});
     },200);
-    console.log(id,elem);
     
   }  
   return (
     <>
       <motion.li
+        className="li-box"
         variants={variants}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}

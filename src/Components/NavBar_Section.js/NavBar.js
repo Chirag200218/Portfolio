@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 const sidebar = {
   open: (height = 150) => ({
-    clipPath: `circle(${height * 2 + 200}px at 250px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at 250px -20px)`,
     zIndex:5,
     transition: {
       type: "spring",

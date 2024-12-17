@@ -24,8 +24,7 @@ function TopPage() {
                 <p>Hello</p>
                 <p>World !!</p>
                 </motion.div>
-            </BackGround>
-            <Content className="animate__animated animate__lightSpeedInLeft animate__delay-2s">
+                <Content className="animate__animated animate__lightSpeedInLeft animate__delay-2s">
                     <div >Hi I'm</div>
                     <div>Chirag Jain</div>
                     <span>
@@ -38,7 +37,9 @@ function TopPage() {
                             }}
                         />
                     </span>
-            </Content>
+                </Content>
+            </BackGround>
+           
         </Deskstop>
        
         <Mobile>
@@ -54,7 +55,7 @@ const Deskstop = styled.div`
     height:100vh;
     width:100vw;
     position:relative;
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 600px) {
         display:none;
     }
     
@@ -123,14 +124,14 @@ const BackGround =  styled.div`
     display:flex;
     align-items:center;
     top: 0%;
-    left: 2%;
+    left: 5vw;
     height: 100vh;
     overflow: hidden;
     width: 90vw;
     // font-weight:700;
     z-index:-1;
     div{
-        font-size: 70rem;
+        font-size: 30rem;
         font-weight: 700;
         color: transparent;
         text-shadow: 0.02em 0.02em 0.01em rgb(0 0 0 / 25%), 0 0 0 #1f1d1d;
@@ -141,53 +142,60 @@ const BackGround =  styled.div`
             margin: 0;
         }
     }
+    @media only screen and (min-width: 3001px) {
+        p {
+            font-size: 70rem;
+        }
+    }
     @media only screen and (max-width: 3000px) {
-        div {
+        p {
             font-size: 55rem;
         }
     }
     @media only screen and (max-width: 2450px) {
-        div {
+        p {
             font-size: 48rem;
         }
     }
     @media only screen and (max-width: 2150px) {
-        div {
+        p {
             font-size: 40rem;
         }
     }
     @media only screen and (max-width: 1700px) {
-        div {
+        p {
             font-size: 34rem;
         }
     }
     @media only screen and (max-width: 1450px) {
-        div {
+        p {
             font-size: 28rem;
         }
     }
-    @media only screen and (max-width: 1300px) {
-        div {
-            font-size: 24rem;
-        }
-    }
-    @media only screen and (max-width: 1150px) {
-        div {
-            font-size: 24rem;
-        }
-    }
-    @media only screen and (max-width: 1025px) {
-        div {
+    
+    
+    @media only screen and (max-width: 1100px) {
+        p {
             font-size: 22rem;
         }
     }
+    @media only screen and (max-width: 900px) {
+        p {
+            font-size: 20rem;
+        }
+    }
+
+    @media only screen and (max-width: 780px) {
+            p {
+                font-size: 16rem;
+            }
+        }
 `;
  
 
 const Content = styled.div`
     position: absolute;
-    top: 24%;
-    left: 8%;
+    left: 5%;
     height: fit-content;
     width: 100%;
     color: white;
@@ -195,6 +203,12 @@ const Content = styled.div`
     font-family: emoji;
     font-weight: 700;
     color: rgb(243,243,243);
+    & > div{
+        font-weight:bold;
+        background: linear-gradient(to right, #d4af37, #ffecb3, #f5d061);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     div{
         display: flex;
         align-items: center;
@@ -202,8 +216,7 @@ const Content = styled.div`
         line-height: 1.2;
         padding: 0;
         margin: 0;
-        /* stroke: wheat; */
-        -webkit-text-stroke: 0.7px #b8b8b8;  //#e9b171;  #2d9687
+        -webkit-text-stroke: 0.7px #b8b8b8;  
     }
     span{
         font-size: 4rem;
@@ -218,53 +231,71 @@ const Content = styled.div`
 
     @media only screen and (max-width: 3000px) {
         div {
-            font-size: 22rem;
+            font-size: 26rem;
+        }
+        span{
+            font-size: 4rem; 
         }
     }
     @media only screen and (max-width: 2450px) {
         div {
-            font-size: 17rem;
+            font-size: 14rem;
         }
     }
     @media only screen and (max-width: 2150px) {
         div {
-            font-size: 17rem;
+            font-size: 12rem;
+        }
+        span{
+            font-size: 3.5rem; 
         }
     }
     @media only screen and (max-width: 1700px) {
         div {
-            font-size: 15rem;
+            font-size: 11rem;
+        }
+        span{
+            font-size: 3.5rem; 
         }
     }
-    @media only screen and (max-width: 1450px) {
-        div {
-            font-size: 12rem;
-        }
-    }
+     
     @media only screen and (max-width: 1300px) {
         div {
             font-size: 10rem;
         }
+        span{
+            font-size: 3rem; 
+        }
     }
     @media only screen and (max-width: 1150px) {
         div {
-            font-size: 9rem;
+            font-size: 8rem;
         }
+        span{
+            font-size: 2.5rem; 
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        div {
+            font-size: 7rem;
+        }
+        span{
+            font-size: 1.5rem; 
+        }
+         
     }
     
     @media only screen and (max-width: 769px) {
         div{
             font-size: 6rem;
         }
-        span{
-            font-size: 2.5rem; 
-        }
+        
     }
 `;
 
 const Mobile = styled.div`
     display:none;
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 600px) {
         display:block;
     }
 `;

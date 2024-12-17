@@ -1,0 +1,63 @@
+.project-details {
+    background: linear-gradient(to top right, #fff5cc, #ffffff);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .project-header {
+    color: black;
+    
+  }
+  
+  .project-details p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .feature-list li {
+    
+  }
+  
+  .cta-buttons {
+    margin-top: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 5px;
+    outline: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .github {
+    background: linear-gradient(to right, #333, #555);
+    color: white;
+  }
+  
+  .live {
+    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+    color: white;
+  }
+  .live, .github{
+    padding: 6px 14px;
+    color: #fff;
+    border-radius: 6px;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    color:white;
+  }
+  

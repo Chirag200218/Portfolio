@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Skill from "./Components/Skills/Skill";
 import Project from "./Components/Project_section/Project";
 import Contact from "./Components/Contact";
+import ProjectRevamp from './Components/Project_section/ProjectRevamp';
 
 function MainResume() {
   return (
@@ -14,7 +15,7 @@ function MainResume() {
         <TopPage/>
         <About/>
         <Skill/>  
-        <Project/>
+        <ProjectRevamp/>
         <Contact/>
     </Resume>
    
@@ -27,7 +28,7 @@ const Resume = styled.div`
   position:relative;
   background-color:#0f0f0f;
   overflow:hidden;
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     width: 0px;

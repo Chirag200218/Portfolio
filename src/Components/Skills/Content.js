@@ -1,48 +1,32 @@
 import React from 'react'
 import styled from 'styled-components'
 import Box from './Box';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {data} from "./db"
 import {motion} from "framer-motion";
+import useMobileView from '../../Hooks/useMobileView';
 
 function Content() {
 
     const [id,setId] = useState(0);
+    const {isMobileView} = useMobileView();
 
-    const handleClick = (e,num)=>{
-
-        if(document.documentElement.clientWidth<="450"){
-            handleClickMobile(e,num);
-            return;
-        }
-       
-        let id1 = num===-1?e.target.id:num;
-        const all = document.getElementsByClassName("one");
-        const element  = document.getElementById(id1);
-        Array.from(all).forEach((elem,ind)=>{
+    useEffect(()=>{
+        const all = document.getElementsByClassName(isMobileView ? "one1" : "one");
+        const element  = document.getElementById(id);
+        Array.from(all).forEach((elem)=>{
             if(elem.id===element.id){
                 element.style.filter = "opacity(1) contrast(1.5) brightness(1.2)";
             }else{
                 elem.style.filter = "opacity(0.4) contrast(1) brightness(1)";
-
             }
         })
-        setId(parseInt(id1));
-    }
+    },[id]);
 
-    const handleClickMobile = (e,num)=>{
+    const handleClick = (e,num)=>{
         let id1 = num===-1?e.target.id:num;
-        const all = document.getElementsByClassName("one1");
-        const element  = document.getElementById(id1);
-        Array.from(all).forEach((elem,ind)=>{
-            if(elem.id===id){
-                element.style.filter = "opacity(1) contrast(1.5) brightness(1.2)";
-            }else{
-                elem.style.filter = "opacity(0.4) contrast(1) brightness(1)";
-            }
-        })
         setId(parseInt(id1));
-    }
+    }    
 
    const handleEnter =(e)=>{
         e.target.style.filter = "opacity(1) contrast(1.5) brightness(1.2)";
@@ -77,29 +61,31 @@ function Content() {
                 <First as={motion.div} viewport={{once:true}} initial={{opacity:0}} whileInView={{opacity:1,}} transition={{duration:1,delay:1.5}} ><img className="one" onMouseEnter={(e)=>handleEnter(e)} onMouseLeave={(e)=>handleLeave(e)}  onClick={(event)=>handleClick(event,-1)} id='4' src= {data[4].ProfileImg} alt="null"></img></First>
                 <Fifth as={motion.div} viewport={{once:true}} initial={{opacity:0}} whileInView={{opacity:1,}} transition={{duration:1,delay:1.5}} ><img className="one" onMouseEnter={(e)=>handleEnter(e)} onMouseLeave={(e)=>handleLeave(e)}  onClick={(event)=>handleClick(event,-1)} id='10' src= {data[10].ProfileImg} alt="null"></img></Fifth>
             </Line>
-            <Store>
-                <Rectangle as={motion.div} viewport={{once:true}} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:1.5,duration:2}}>
-                    {
-                        data.map((elem,ind)=>{ 
-                            return(
-                                ind<=5 && <Square style={{display:ind===id?"none":"block"}} key={ind}><img  className="one1" onClick={(event)=>handleClick(event,-1)} id={elem.id} src={elem.ProfileImg} alt="null"></img></Square>
-                            )  
-                        })
-                    }
-                </Rectangle>
-                <Main as={motion.div} viewport={{once:true}} initial={{scale:0}} whileInView={{scale:1}} transition={{delay:1,duration:1.5}}>
-                    <img  src={data[id].ProfileImg} alt="null"></img>
-                </Main>
-                <Rectangle as={motion.div} viewport={{once:true}} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:1.5,duration:2}}>
-                    {
-                        data.map((elem,ind)=>{ 
-                            return(
-                                ind>5 && <Square style={{display:ind===id?"none":"block"}} key={ind}><img  className="one1" onClick={(event)=>handleClick(event,-1)} id={elem.id} src={elem.ProfileImg} alt="null"></img></Square>
-                            )  
-                        })
-                    }   
-                </Rectangle>
-            </Store>
+            { isMobileView && 
+                <Store>
+                    <Rectangle as={motion.div} viewport={{once:true}} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:1.5,duration:2}}>
+                        {
+                            data.map((elem,ind)=>{ 
+                                return(
+                                    ind<=5 && <Square style={{display:ind===id?"none":"block"}} key={ind}><img  className="one1" onClick={(event)=>handleClick(event,-1)} id={elem.id} src={elem.ProfileImg} alt="null"></img></Square>
+                                )  
+                            })
+                        }
+                    </Rectangle>
+                    <Main as={motion.div} viewport={{once:true}} initial={{scale:0}} whileInView={{scale:1}} transition={{delay:1,duration:1.5}}>
+                        <img  src={data[id].ProfileImg} alt="null"></img>
+                    </Main>
+                    <Rectangle as={motion.div} viewport={{once:true}} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:1.5,duration:2}}>
+                        {
+                            data.map((elem,ind)=>{ 
+                                return(
+                                    ind>5 && <Square style={{display:ind===id?"none":"block"}} key={ind}><img  className="one1" onClick={(event)=>handleClick(event,-1)} id={elem.id} src={elem.ProfileImg} alt="null"></img></Square>
+                                )  
+                            })
+                        }   
+                    </Rectangle>
+                </Store>
+            }
         </Left>
         <Center>
             <Box  id={id} handleClick={handleClick} />
@@ -128,17 +114,16 @@ function Content() {
 }
 
 const Container = styled.div`
-    height:80%;
+    height:75%;
     width:100vw;
     display:flex;
     align-items:center;
-    @media (max-width: 768px) {
+    @media (max-width: 825px) {
         flex-direction:column;
-       
+        justify-content:space-evenly;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
         height:87%;
-        // border: 1px solid red;
         justify-content:space-around;
         align-items:center;
         display:flex;
@@ -152,12 +137,13 @@ const Left = styled.div`
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 768px) {
+    @media (max-width: 825px) {
         width: 100vw;
         height: 20%;
         flex-direction: row;
+         align-items: baseline;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
         height:20%;
         // border: 1px solid red;
     }
@@ -174,11 +160,11 @@ const Center = styled.div`
     @media (max-width: 1026px) {
         width:51%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 825px) {
         width:100vw;
-        height: 60%;
+        height: 50%;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
         height: 80%;
         justify-content: space-around;
    }
@@ -190,12 +176,12 @@ const Right = styled.div`
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 768px) {
+    @media (max-width: 825px) {
         width: 100vw;
         height: 20%;
         flex-direction: row;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
         display:none;
     }
     
@@ -207,12 +193,12 @@ const Line = styled.div`
     // border: 1px solid red;
     display:flex;
     justify-content: space-between;
-    @media (max-width: 768px) {
+    @media (max-width: 825px) {
         height:100%;
         // width:20%;   
         // flex-direction:column;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
         display:none;
    }
 `;
@@ -220,24 +206,23 @@ const Line = styled.div`
 
 const Store = styled.div`
     display:none;
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
         display:flex;
         justify-content: space-around;
         align-items:center;
         height: 100%;
         width:  100%;
-        // border: 1px solid red;
     }
 `;
 
 const First = styled.div`
     position: relative;
     top: -25px;
-    height: 8rem;
-    width: 8rem;
+    height: fit-content;
+    width: fit-content;
     img{
-        height: 100%;
-        width: 100%;
+        height: 18rem;
+        width: 18rem;
         filter:opacity(0.4) contrast(1);
         transition:0.4s;
         // &:hover {
@@ -245,10 +230,24 @@ const First = styled.div`
         //     cursor:pointer;
         //     scale:1.4;
 		// }
-
-        @media (max-width: 770px) {
-            height:6rem;
-            width:6rem;
+        @media (max-width: 2500px) {
+            height:15rem;
+            width:15rem;
+            top:0px;
+        }
+        @media (max-width: 2100px) {
+            height:10rem;
+            width:10rem;
+            top:0px;
+        }
+        @media (max-width: 1720px) {
+            height:8rem;
+            width:8rem;
+            top:0px;
+        }
+        @media (max-width: 825px) {
+            height:6.5rem;
+            width:6.5rem; 
             top:0px;
         }
     }
@@ -260,12 +259,11 @@ const First = styled.div`
 const Second  = styled.div`
     position: relative;
     top: 25px;
-    height: 8rem;
-    width: 8rem;
-    // border: 1px solid orange;
+    height: fit-content;
+    width: fit-content;
     img{
-        height: 8rem;
-        width: 8rem;
+       height: 18rem;
+        width: 18rem;
         filter:opacity(0.4) contrast(1);
         transition:0.4s;
         &:hover {
@@ -273,10 +271,24 @@ const Second  = styled.div`
             cursor:pointer;
             scale:1.2;
 		}
-
-        @media (max-width: 770px) {
-            height:6rem;
-            width:6rem;
+        @media (max-width: 2500px) {
+            height:15rem;
+            width:15rem;
+            top:0px;
+        }
+        @media (max-width: 2100px) {
+            height:10rem;
+            width:10rem;
+            top:0px;
+        }
+        @media (max-width: 1720px) {
+            height:8rem;
+            width:8rem;
+            top:0px;
+        }
+        @media (max-width: 825px) {
+            height:6.5rem;
+            width:6.5rem;
         }
     }
     
@@ -287,12 +299,11 @@ const Third = styled.div`
     position: relative;
     top: 8px;
     left: 70px;
-    height: 8rem;
-    width: 8rem;
-    // border: 1px solid orange;
+    height: fit-content;
+    width: fit-content;
     img{
-        height: 8rem;
-        width: 8rem;
+      height: 18rem;
+        width: 18rem;
         filter:opacity(0.4) contrast(1) ;
         transition:0.4s;
         &:hover {
@@ -300,10 +311,24 @@ const Third = styled.div`
             cursor:pointer;
             scale:1.4;
 		}
-
-        @media (max-width: 770px) {
-            height:6rem;
-            width:6rem;
+         @media (max-width: 2500px) {
+            height:15rem;
+            width:15rem;
+            top:0px;
+        }
+         @media (max-width: 2100px) {
+            height:10rem;
+            width:10rem;
+            top:0px;
+        }
+        @media (max-width: 1720px) {
+            height:8rem;
+            width:8rem;
+            top:0px;
+        }
+        @media (max-width: 825px) {
+             height:6.5rem;
+            width:6.5rem;
         }
     }
     
@@ -314,12 +339,11 @@ const Fourth = styled.div`
     position: relative;
     top: 0px;
     right: 70px;
-    height: 8rem;
-    width: 8rem;
-    // border: 1px solid orange;
+   height: fit-content;
+    width: fit-content;
     img{
-        height: 8rem;
-        width: 8rem;
+        height: 18rem;
+        width: 18rem;
         // border-radius: 50%;
         filter:opacity(0.4) contrast(1);
         transition:0.4s;
@@ -328,10 +352,24 @@ const Fourth = styled.div`
             cursor:pointer;
             scale:1.4;
 		}
-
-        @media (max-width: 770px) {
-            height:6rem;
-            width:6rem;
+         @media (max-width: 2500px) {
+            height:15rem;
+            width:15rem;
+            top:0px;
+        }
+         @media (max-width: 2100px) {
+            height:10rem;
+            width:10rem;
+            top:0px;
+        }
+        @media (max-width: 1720px) {
+            height:8rem;
+            width:8rem;
+            top:0px;
+        }
+        @media (max-width: 825px) {
+             height:6.5rem;
+            width:6.5rem;
         }
     }  
    
@@ -339,15 +377,14 @@ const Fourth = styled.div`
 
 
 const Fifth = styled.div`
-position: relative;
-top: 32px;
-right: 0px;
-height: 8rem;
-width: 8rem;
-// border: 1px solid orange;
+    position: relative;
+    top: 32px;
+    right: 0px;
+   height: fit-content;
+    width: fit-content;
     img{
-        height: 8rem;
-        width: 8rem;
+        height: 18rem;
+        width: 18rem;
         filter: opacity(0.4) contrast(1);
         transition:0.4s;
         &:hover {
@@ -355,10 +392,24 @@ width: 8rem;
             cursor:pointer;
             scale:1.4;
 		}
-
-        @media (max-width: 770px) {
-            height:6rem;
-            width:6rem;
+         @media (max-width: 2500px) {
+            height:15rem;
+            width:15rem;
+            top:0px;
+        }
+        @media (max-width: 2100px) {
+            height:10rem;
+            width:10rem;
+            top:0px;
+        }
+        @media (max-width: 1720px) {
+            height:8rem;
+            width:8rem;
+            top:0px;
+        }
+        @media (max-width: 825px) {
+            height:6.5rem;
+            width:6.5rem;
         }
     }  
 `;

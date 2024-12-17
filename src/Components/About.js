@@ -29,7 +29,9 @@ function About() {
   return (
     <Container id="AboutSection">
         <Laptop>
-         <Header className='header-responsive-style' as={motion.div} viewport={{ once: true }}  initial={{y:200,opacity:0}} whileInView={{y:0,opacity:1}}  transition={{duration:1}}>About</Header>
+         <Header className='header-responsive-style' as={motion.div} viewport={{ once: true }}  initial={{y:200,opacity:0}} whileInView={{y:0,opacity:1}}  transition={{duration:1}}>
+           <p> About</p>
+          </Header>
          <Circle></Circle>
          <Circle1></Circle1>
         <DecisionBox>
@@ -42,46 +44,48 @@ function About() {
             {
               type==="About" && 
               (<AboutBox className='text-responsive-style'>
-                <p>As a full stack developer and educator associate, I bring a wealth of technical knowledge and practical skills to any software development role. I have experience in using tools such as React.js, Next.js, TypeScript, Express.js, PostgreSQL and Java DSA, and I have a proven track record of delivering high-quality code.</p>
-                <p>My passion for software development fuels my desire to continuously learn and grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing system, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
-                   My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1950+ rating in leetcode contests and 4🌟 on codechef.</p>
-                <p>Throughout my academic journey, I have consistently achieved excellent grades, demonstrating my dedication and commitment to learning. have participated in various hackathons and coding competitions, where I have collaborated with other developers and put my skills to the test in real-world scenarios. In my free time, I enjoy building small-scale projects, teaching my fellow-mates, juniors and play table tennis.</p>
-              </AboutBox>)
+                  <p>Hello! I'm <strong>Chirag Jain</strong>, a Full Stack Developer who loves tackling problems, optimizing performance, and building solutions that make life easier—one line of code at a time.</p>
+                  <p>I've always been curious about <strong>how things work</strong>, and that mindset has stuck with me. Whether it's breaking down complex problems in competitive programming (hello, <strong>LeetCode Knight rating</strong> and <strong>4* CodeChef</strong>!) or designing responsive dashboards at work, I enjoy the process of solving challenges efficiently and cleanly.</p>
+                  <p>At my current role, I've worked on building <strong>interactive dashboards</strong>, optimizing APIs, and implementing features that reduce load times and improve user experience. I'm all about delivering software that's <strong>fast, functional, and user-friendly</strong>.</p>
+                  <p>Beyond work, I'm big on <strong>continuous learning</strong>—I love exploring new frameworks, optimizing my code, and staying up-to-date with the ever-changing tech landscape. I also enjoy collaborating with others, whether it's brainstorming solutions, reviewing code, or fixing that one bug that's been haunting us all.</p>
+                  <p>Now, for the fun part: I'm also a <strong>low-key foodie</strong>. You'll rarely see me turn down a good cup of <strong>chai</strong> or a pizza with extra toppings. I like to think it's the fuel behind all those late-night debugging sessions.</p>
+                  <p>At the end of the day, I'm someone who believes in balance: <strong>coding, learning, and staying curious</strong>—because that's how great software (and great developers) are made.</p>
+                  <p>If you're looking for someone who's passionate, adaptable, and ready to take on challenges—while occasionally cracking a joke or two—let's connect. I'm always excited to collaborate, learn, and build something meaningful together.</p>
+
+                </AboutBox>)
             }
             {
               type==="Experience" &&
-              <BackImage>
-                  
+              <BackImage> 
                 <Content>
-                <img src={'/images/geek.png'} alt="chirag"></img>
                   <h3>Teaching Associate</h3>
                   <h5>Geekster</h5>
                   <span>Nov,2022 - Dec,2022</span>
-                  <App style={{justifyContent:"space-around"}}> 
-                    <p style={{fontSize:"13px"}}>🌟Took regular live and remedial classes for 70+ students in java/DSA.</p>
-                    <p style={{fontSize:"13px"}}>🌟Helped 250+ students by debugging their codes and solved their doubts.</p>
-                    <p style={{fontSize:"13px"}}>🌟Created 300+ problems based on Java/DSA.</p>
+                  <App className='card-text-responsive-style'> 
+                    <li>🌟 Took regular live and remedial classes for 70+ students in java/DSA.</li>
+                    <li>🌟 Helped 250+ students by debugging their codes and solved their doubts.</li>
+                    <li>🌟 Created 300+ problems based on Java/DSA.</li>
                   </App>
                 </Content>  
                 <Content>
-                  <img src={'/images/geek.png'} alt="chirag"></img>
+                   
                   <h3>SDE INTERN</h3>
                   <h5>Geekster</h5>
                   <span>July,2022 - Oct,2022</span>
-                  <App style={{justifyContent:"space-around"}}> 
-                    <p style={{fontSize:"13px"}}>🌟Revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</p>
-                    <p style={{fontSize:"13px"}}>🌟Fixed bugs and optimized website perfomance and speed.</p>
-                    <p style={{fontSize:"13px"}}>🌟Implement productive design to make data more highlighted and clear to audience.</p>
+                  <App className='card-text-responsive-style'> 
+                    <li>🌟 Revamped geekster website using nextJs and typescript, making it responsive for mobile devices and to improve user engagement.</li>
+                    <li>🌟 Fixed bugs and optimized website perfomance and speed.</li>
+                    <li>🌟 Implement productive design to make data more highlighted and clear to audience.</li>
                   </App>
                 </Content>
                 <Content>
-                  <img src={'/images/AppPerfect.png'} alt="chirag"></img>
+                 
                   <h3>Full Stack Developer</h3>
                   <h5>AppPerfect Corp</h5>
                   <span>Sept,2023 - Present</span>
-                  <App style={{justifyContent:"space-around"}}> 
-                    <p style={{fontSize:"13px"}}>🌟Developed and maintained user-friendly interfaces with React, enhancing frontend performance and ensuring seamless user experience.</p>
-                    <p style={{fontSize:"13px"}}>🌟Engineered and integrated scalable APIs, streamlining data access and enhancing system performance across application components.</p>
+                  <App className='card-text-responsive-style'> 
+                    <li >🌟Developed and maintained user-friendly interfaces with React, enhancing frontend performance and ensuring seamless user experience.</li>
+                    <li>🌟Engineered and integrated scalable APIs, streamlining data access and enhancing system performance across application components.</li>
                   </App>
                 </Content>
               </BackImage>
@@ -91,17 +95,17 @@ function About() {
               <BackImage >
               <Content>
                 <img src={'/images/CA.png'} alt="chirag"></img>
-                  <h3>Matric, 2018 </h3>
+                  <h3>Matric</h3>
                   <h5>Central Academy, Chittor</h5>
                   <App style={{textAlign:"center"}}>
                     <p style={{fontSize:"18px"}}>10th class</p>
                     <p style={{fontSize:"12px"}}>2017-18</p>
-                    <p style={{fontSize:"0.9vw"}}>Got Best Student Award,state level in Kho-kho,table tennis</p>
+                    <p style={{fontSize:"0.9vw"}}>Received the "Best Student Award" for outstanding performance in both academics and sports, state level in Kho-kho, table tennis.</p>
                   </App>
               </Content>
               <Content>
                 <img src={'/images/CA.png'} alt="chirag"></img>
-                  <h3>Secondary, 2020 </h3>
+                  <h3>Secondary </h3>
                   <h5>Central Academy, Chittor</h5>
                   <App style={{textAlign:"center"}}>
                     <p style={{fontSize:"18px"}}>12th class</p>
@@ -113,12 +117,11 @@ function About() {
               <img src={'/images/skit.png'} alt="chirag"></img>
                 <h3>Btech, CSE</h3>
                 <h5>SKIT, Jaipur</h5>
-                <span>2020-24</span>
                 <App style={{textAlign:"center"}}>
                   <p style={{fontSize:"18px"}}>B.tech CSE</p>
                   <p style={{fontSize:"12px"}}>2020-2024</p>
                   <p style={{fontSize:"18px"}}>CGPA: 9.5</p>
-                  <p style={{fontSize:"0.9vw"}}>Won multiple university TT champioship and taught 300+ juniors coding through college clubs</p>
+                  <p style={{fontSize:"0.9vw"}}>Won multiple university Table Tennis championships and taught 300+ juniors coding through college clubs.</p>
                 </App>
               </Content>
 
@@ -132,10 +135,12 @@ function About() {
             <AnimatePresence>
               {type==="About" && (
                 <Work className='text-responsive-style' style={{width:"350px"}}as={motion.div}  initial={{opacity:0}} whileInView={{opacity:1}} exit={{opacity:0}} transition={{duration:0.3}}>
-                 <p style={{color:"rgba(243, 229, 177, 0.99)"}}>As a full stack developer and educator associate, I bring a wealth of technical knowledge and practical skills to any software development role. I have experience in using tools such as React.js, Next.js, TypeScript, Express.js, PostgreSQL and Java DSA, and I have a proven track record of delivering high-quality code.</p>
-                <p style={{color:"rgba(243, 229, 177, 0.80)"}}>My passion for software development fuels my desire to continuously grow in this ever-evolving field. Whether it's building a new web application from scratch or optimizing an existing, I am constantly driven by the thrill of turning complex ideas into elegant, functional software.
-                   My expertise lies in data structures, and I enjoy solving complex problems by using my knowledge of algorithms and data structures. Has solved over 1000+ problems over different platform, achieved 1800+ rating in leetcode contests and 4🌟 on codechef.</p>
-                <p style={{color:"rgba(243, 229, 177, 0.99)"}}>Throughout my academics, I have consistently achieved excellent grades. have participated in various hackathons and coding competitions, where I have collaborated with other developers and put my skills to the test in real-world scenarios. In my free time, I enjoy building small-scale projects, teaching my fellow-mates, juniors and play table tennis.</p>
+                  <p>Hi, I'm <strong>Chirag Jain</strong>, a <strong>Full Stack Developer</strong> who thrives on solving complex problems and building clean, scalable solutions. I enjoy turning requirements into applications that not only work but also feel intuitive and seamless for users.</p>
+                  <p>I'm the kind of person who enjoys digging into tricky coding challenges, breaking them down, and crafting elegant solutions—whether it's designing dashboards, optimizing APIs, or reducing rendering times. For me, coding is like solving a brain teaser with the added bonus that the result actually helps people.</p>
+                  <p>When I'm not knee-deep in code, I'm probably reading up on new tech or working on a fun project to sharpen my skills. I believe in <strong>continuous learning</strong> and staying adaptable—because, let's face it, the tech world never stops evolving.</p>
+                  <p>Oh, and one more thing: I'm also a <strong>low-key foodie</strong> who will never turn down a good cup of <strong>chai</strong> or a pizza with extra toppings. It's all about balance, right?</p>
+                  <p>If you're looking for someone who combines problem-solving, curiosity, and a dash of humor, let's connect. Whether it's building, debugging, or brainstorming, I'm always ready to jump in.</p>
+
                 </Work>
               )}
             </AnimatePresence>
@@ -195,7 +200,7 @@ function About() {
                               </ul>
                           </Expand>
                         )}
-                  </Openbox>
+                    </Openbox>
                     <Openbox onClick={(e)=>{work==="two"?setWork(""):setWork("two");view(e,"two")}} id="two">
                           <div style={{height:"90px",position:"relative",padding:"10px"}}>
                             <h3 style={{width:"70%",wordBreak:"break-word"}}>SDE Intern</h3>
@@ -235,7 +240,7 @@ function About() {
             <Base>
               <ResumeBox>
                 <span>Can I help you? lets work</span>
-                <a href="https://drive.google.com/file/d/1YPwAlfkdX57Q7jlq-fjHgmoHOvDYFXd2/view?usp=drivesdk" download="ChiragJain_Resume" target='_blank'>
+                <a href=" https://drive.google.com/file/d/1MHSE7F1pFQg0XRAjIhMiIKdcZHjj8vwS/view?usp=sharing" download="ChiragJain_Resume" target='_blank'>
                   <motion.button whileTap={{scale:0.8}} type="button">Download Resume</motion.button>
                 </a>
               </ResumeBox>
@@ -282,6 +287,7 @@ const Expand = styled.div`
       margin-bottom:8px;
       width: 250px;
       margin-left:15px;
+      list-style: none;
     }
     li:before{
       position:absolute;
@@ -306,7 +312,7 @@ const Openbox =styled.div`
 `;
 const Work = styled.div`
   height:70%;
-  width:300px;
+  width:90vw;
   // border:1px solid red;
   margin-top:3%;
   left: 0; 
@@ -318,6 +324,7 @@ const Work = styled.div`
    
   p{
     margin-bottom:4px;
+    color:rgba(243, 229, 177, 0.99);
   }
   
   &::-webkit-scrollbar {
@@ -386,6 +393,9 @@ const InnerCircle = styled.div`
   // box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   box-shadow: inset 2px 0px 15px 1px rgba(0,0,0,0.5);
+  p{
+    color:black;
+  }
   &:hover{
     scale:1.5;
     cursor:pointer;
@@ -473,6 +483,7 @@ transform: rotate(40deg);
 const Container = styled.div`
     height:100%;
     width:100%;
+    max-height:900px;
     position:relative;
     scroll-snap-align: start;
     display:flex;
@@ -558,9 +569,10 @@ const TitleBox = styled.div`
 
 const DecisionBox = styled.div`
   height:7%;
-  width:80%;
+  max-height:60px;
+  width:60%;
   margin-top:100px;
-  margin-left:6%;
+  margin-left:7vw;
   display:flex;
   @media only screen and (max-width: 130px) {
     width:90%;
@@ -579,6 +591,11 @@ const Circle = styled.div`
   background-color:#fda769;
   top: 15%;
   right: 16%;
+  @media only screen and (max-width: 900px) {
+    height:100px;
+    width:100px;
+    right: 10%;
+  }
 `;
 const Circle1 = styled.div`
   position:absolute;
@@ -612,9 +629,11 @@ const Decision = styled.div`
 `;
 const ContentBox = styled.div`
   height:60%;
+  max-height:600px;
   z-index:2;
   width:80%;
-  margin-left:6%;
+  padding:20px;
+  margin-left:5vw;
   // border:1px solid grey;
   background-color:	rgba(60,60,60,0.3);
   display:flex;
@@ -638,54 +657,69 @@ const BackImage= styled.div`
 
 
 const Header = styled.div`
-z-index:3;
-    height: 33rem;
-    width: 80rem;
+    z-index:3;
     position: absolute;
-    right: 10px;
-    bottom: -20px;
+    right: 0px;
+    bottom: 0px;
     font-family: 'GT Sectra Display','Times New Roman',sans-serif;
-    // border: 1px solid red;
-    font-size: 28rem;
+    font-size: 44rem;
     font-weight: bolder;
     color: transparent;
     text-shadow: 0.02em 0.02em 0.01em rgb(0 0 0 / 25%), 0 0 0 #191919;
-   
+    p{
+      line-height:0.8;
+    }
+   @media only screen and (max-width: 3000px) {
+      font-size: 40rem;
+    }
+    @media only screen and (max-width: 2450px) {
+      font-size: 34rem;
+    }
+    @media only screen and (max-width: 2150px) {
+      font-size: 30rem;
+    }
+    @media only screen and (max-width: 1750px) {
+      font-size: 28rem;
+    }
     @media only screen and (max-width: 1300px) {
-      font-size: 27rem;
-      bottom:-40px;
-      right:-40px;
+      font-size: 25rem;
     }
-
+     @media only screen and (max-width: 1000px) {
+      font-size: 22rem;
+    }
     @media only screen and (max-width: 770px) {
-      width: 47rem;
       font-size: 18rem;
-      height: 19rem;
-    }
-
-    @media only screen and (max-width: 430px) {
-        display:none;
     }
 `;
 
-const App = styled.div`
-    display:none;
-    position:absolute;
-    cursor:pointer;
-    z-index:1;
-    flex-direction:column;
-    justify-content:center;
-    border-radius:14px;
-    height:100%;
-    width:100%;
+const App = styled.ul`
+  position:static;
+  display:none;
+  cursor:pointer;
+  height:fit-content;
+  z-index:1;
+  flex-direction:column;
+  justify-content:center;
+  border-radius:14px;
+  width:100%;
+  
 
-    padding:10px;
-    transition:0.6s;
-    color:white;  
+  padding:5px;
+  transition:0.6s;
+  color:white; 
+  li{
+    width:100%;
+    padding:2px;
+    margin:0px;
+    list-style: none;
+  }
 `;
 const Content = styled.div`
-    height:220px;
-    width:220px;
+    height: fit-content;
+    display:none;
+    width:27%;
+    max-width:300px;
+    max-height:300px;
     border-radius:15px;
     display:flex;
     flex-direction:column;
@@ -694,6 +728,7 @@ const Content = styled.div`
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0,0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     justify-content:center;
     position:relative;
+    padding:10px;
     transition: 1s;
     h3{
       margin:10px 0px;
@@ -703,30 +738,39 @@ const Content = styled.div`
       margin-bottom:10px;
     }
     img{
-      height:70px;
+      height: 4rem;
     }
     &:hover{
       & > ${App}{
-        display:flex;
+        display:block;
       }
       scale:1.1;
       background-color:#74541a; 
       span,h3,h5,img{
         display:none;
       }
+    } 
+   
+    
 
-      
-    }
+   @media only screen and (min-width: 2500px) {
+      max-width:400px;
+   }
 `;
 const AboutBox= styled.div`
     height:100%;
     width:100%;
-    padding:20px;
-    padding-top:40px;
+    
+    overflow:scroll;
     p{
       color:#fec868;
-      margin-bottom:10px;
+      margin-bottom:5px;
     }
+       ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
 `;
 
 export default About
